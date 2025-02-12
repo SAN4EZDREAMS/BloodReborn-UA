@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved. -->
+<!-- SPDX-License-Identifier: CC-BY-NC-ND-4.0 -->
+<fmg>
+<compression>None</compression>
+<version>BloodReborn-UA</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="1">魔石接頭語１</text>
+<text id="2">魔石接頭語２</text>
+<text id="3">魔石接頭語３</text>
+<text id="4">魔石接頭語４</text>
+</entries>
+</fmg>

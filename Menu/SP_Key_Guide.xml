@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved. -->
+<!-- SPDX-License-Identifier: CC-BY-NC-ND-4.0 -->
+<fmg>
+<compression>None</compression>
+<version>BloodReborn-UA</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="1000">Л. кнопка панели</text>
+<text id="1001">П. кнопка панели</text>
+<text id="100000">ОК</text>
+<text id="100001">Подтвердить</text>
+<text id="100002">Использовать предмет</text>
+<text id="100003">Ред.</text>
+<text id="100004">Доб./убр. ритуал</text>
+<text id="100005">Доб./убр. ритуал</text>
+<text id="100006">%null%</text>
+<text id="100007">Сброс</text>
+<text id="100008">Надеть/снять</text>
+<text id="100009">Сохранить</text>
+<text id="100010">Взять</text>
+<text id="100011">Купить</text>
+<text id="100012">Продать</text>
+<text id="100013">Больше инфо.</text>
+<text id="100014">Подробнее</text>
+<text id="110000">Вернуться</text>
+<text id="110001">Закрыть</text>
+<text id="110002">Отмена</text>
+<text id="120000">Показать</text>
+<text id="120001">Проба</text>
+<text id="120002">Завершить</text>
+<text id="120003">Защита ВКЛ/ВЫКЛ</text>
+<text id="120004">Убрать</text>
+<text id="120005">Подтвердить</text>
+<text id="120006">Начать ритуал</text>
+<text id="120007">Удалить</text>
+<text id="120008">Образец</text>
+<text id="120009">Показать себя</text>
+<text id="120010">Общий доступ</text>
+<text id="120011">Пок. палитру</text>
+<text id="120012">Показать слайдер</text>
+<text id="130000">Сортировать</text>
+<text id="130001">Сброс настроек</text>
+<text id="130002">Сохранить все</text>
+<text id="130003">Взять все</text>
+<text id="130004">Перекл.</text>
+<text id="130005">Изм. действ.</text>
+<text id="130006">Переключить</text>
+<text id="130007">Показать 1-ое место</text>
+<text id="140000">Изменить формат записи</text>
+<text id="140001">Показать запас</text>
+<text id="140002">Показать инвентарь</text>
+<text id="150000">Прокрутить</text>
+<text id="150001">%null%</text>
+<text id="150002">Изменить на 10</text>
+<text id="150003">Увеличение на 10</text>
+<text id="150004">Уменьшение на 10</text>
+<text id="150005">На стр. вверх</text>
+<text id="150006">На стр. вниз</text>
+<text id="150007">Сохранить все</text>
+<text id="150008">Забрать все</text>
+<text id="150009">Починить все</text>
+<text id="150010">Убрать</text>
+<text id="150011">След. 100</text>
+<text id="150012">Пред. 100</text>
+<text id="150013">Приблизить</text>
+<text id="150014">Отдалить</text>
+<text id="150015">Поменять зону применения</text>
+<text id="150016">Масш.</text>
+<text id="160000">*</text>
+<text id="160001">Выйти</text>
+<text id="200000">Выбрать</text>
+<text id="200001">Изменить</text>
+<text id="200002">*</text>
+<text id="200003">Количество</text>
+<text id="200004">%null%</text>
+<text id="200005">Настроить</text>
+<text id="200006">Прокрутить</text>
+<text id="310000">Пов.</text>
+<text id="320000">Помощь</text>
+<text id="320001">Сброс камеры</text>
+<text id="400000">*</text>
+<text id="400001">*</text>
+<text id="400002">*</text>
+<text id="400003">Удалить</text>
+<text id="400004">Хорошо</text>
+<text id="400005">Плохо</text>
+<text id="400006">*</text>
+<text id="400007">Управление</text>
+<text id="407000">%null%</text>
+<text id="407001">ОК</text>
+</entries>
+</fmg>

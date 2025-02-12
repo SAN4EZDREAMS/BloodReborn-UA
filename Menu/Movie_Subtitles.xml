@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved. -->
+<!-- SPDX-License-Identifier: CC-BY-NC-ND-4.0 -->
+<fmg>
+<compression>None</compression>
+<version>BloodReborn-UA</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="900400">А, да... Бледная кровь...</text>
+<text id="900401"> </text>
+<text id="900402">Вы пришли, куда нужно.</text>
+<text id="900403">В Ярнаме проводят кровослужения.</text>
+<text id="900404">Вам лишь необходимо раскрыть его тайну.</text>
+<text id="900405">Но с чего начнет посторонний вроде вас?</text>
+<text id="900406">Конечно, перелить себе немного ярнамской крови...</text>
+<text id="900407">Но сперва вам понадобится контракт...</text>
+</entries>
+</fmg>

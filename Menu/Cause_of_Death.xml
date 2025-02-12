@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved. -->
+<!-- SPDX-License-Identifier: CC-BY-NC-ND-4.0 -->
+<fmg>
+<compression>None</compression>
+<version>BloodReborn-UA</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="0">消すべからず</text>
+<text id="1">なんらかの原因で死亡</text>
+<text id="2">%null%</text>
+<text id="3">%null%</text>
+<text id="4">%null%</text>
+<text id="5">%null%</text>
+<text id="6">%null%</text>
+<text id="7">%null%</text>
+<text id="8">%null%</text>
+<text id="9">%null%</text>
+<text id="10">落下死</text>
+<text id="100">&lt;?murdererName?&gt;に殺害される</text>
+<text id="200">毒で死亡</text>
+<text id="1000">&lt;?murdererName?&gt;の攻撃Aで死亡</text>
+<text id="106000">脳喰らいに脳を吸われて死亡</text>
+</entries>
+</fmg>

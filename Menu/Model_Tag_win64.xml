@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved. -->
+<!-- SPDX-License-Identifier: CC-BY-NC-ND-4.0 -->
+<fmg>
+<compression>None</compression>
+<version>BloodReborn-UA</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="10">TEST_win64</text>
+<text id="10000">%null%</text>
+<text id="10001">%null%</text>
+<text id="10002">LB</text>
+<text id="10003">LT</text>
+<text id="10004">RT</text>
+<text id="10005">LIVE</text>
+<text id="10006">Тег игрока</text>
+<text id="10007">%null%</text>
+<text id="10008">%null%</text>
+<text id="10009">%null%</text>
+<text id="10010">%null%</text>
+<text id="10011">%null%</text>
+<text id="10012">%null%</text>
+<text id="10013">%null%</text>
+<text id="10014">%null%</text>
+<text id="10015">%null%</text>
+<text id="10016">%null%</text>
+<text id="10017">%null%</text>
+<text id="10018">%null%</text>
+<text id="10019">%null%</text>
+<text id="10020">%null%</text>
+<text id="10021">%null%</text>
+<text id="10022">%null%</text>
+<text id="10023">%null%</text>
+<text id="10024">%null%</text>
+<text id="10025">%null%</text>
+<text id="10026">%null%</text>
+<text id="10027">%null%</text>
+<text id="10028">%null%</text>
+<text id="10029">%null%</text>
+<text id="10030">%null%</text>
+<text id="10031">%null%</text>
+<text id="10032">%null%</text>
+<text id="10033">%null%</text>
+</entries>
+</fmg>
