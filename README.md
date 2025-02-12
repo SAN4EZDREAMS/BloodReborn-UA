@@ -40,5 +40,4 @@ If you have any questions or suggestions, feel free to reach out to me via [GitH
 
 ---
 
-**Translation Author**: SAN4EZ DREAMS
-**Project Start Date**: 02.12.2025
+**Copyright © 2025 BloodReborn-UA. All rights reserved.**
