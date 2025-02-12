@@ -15,7 +15,7 @@ This translation is licensed under the terms of **[Creative Commons Attribution-
 - You may copy and distribute the material for non-commercial purposes, while preserving the attribution.
 - You may not alter this translation or use it for commercial purposes without my permission.
 
-Translation Author: **[SAN4EZ DREAMS]**
+Translation Author: **SAN4EZ DREAMS**
 
 ## Installation
 
@@ -36,9 +36,9 @@ The project is open for contributions, but any changes must be approved by the t
 
 ## Contact
 
-If you have any questions or suggestions, feel free to reach out to me via [GitHub Issues](https://github.com/SAN4EZDREAMS/BloodReborn-UA/issues) or [san4ezreload@gmail.com].
+If you have any questions or suggestions, feel free to reach out to me via [GitHub Issues](https://github.com/SAN4EZDREAMS/BloodReborn-UA/issues) or san4ezreload@gmail.com.
 
 ---
 
-**Translation Author**: [SAN4EZ DREAMS]  
-**Project Start Date**: [02.12.2025]
+**Translation Author**: SAN4EZ DREAMS
+**Project Start Date**: 02.12.2025
