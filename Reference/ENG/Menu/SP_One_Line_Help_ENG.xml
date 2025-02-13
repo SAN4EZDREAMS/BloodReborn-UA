@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fmg>
+<compression>None</compression>
+<version>DarkSouls3</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="40330">Restore to default settings.</text>
+<text id="40331">Confirm settings and continue.</text>
+<text id="101000">View items in your possession.</text>
+<text id="101001">Change game settings or exit game.</text>
+<text id="101002">Equip weapon.</text>
+<text id="101003">Equip protection.</text>
+<text id="101004">Equip quick items.</text>
+<text id="101005">%null%</text>
+<text id="101006">Check stats.</text>
+<text id="102000">Select item to use.</text>
+<text id="103000">Select weapon/attire to equip.</text>
+<text id="104000">Select item to equip.</text>
+<text id="105000">Check stats.</text>
+<text id="110000">Set controls.</text>
+<text id="110001">Adjust the game environment.</text>
+<text id="110002">Adjust the brightness level.</text>
+<text id="110003">Change network settings.</text>
+<text id="110004">Exit game and return to title menu.</text>
+<text id="110005">Change language settings.</text>
+<text id="111000">Change environment.</text>
+<text id="111101">Turn subtitles ON/OFF.</text>
+<text id="111102">Turn HUD ON/OFF.</text>
+<text id="111103">Adjust music volume.</text>
+<text id="111104">Adjust sound effects volume.</text>
+<text id="111105">Adjust voice volume.</text>
+<text id="112000">Adjust the brightness level.</text>
+<text id="113000">Change controls.</text>
+<text id="113100">Change camera x-axis.</text>
+<text id="113101">Change camera y-axis.</text>
+<text id="113102">%null%</text>
+<text id="113103">Set camera movement speed.</text>
+<text id="113104">Auto lock-on to new target when former target dies.</text>
+<text id="113105">%null%</text>
+<text id="113106">Set whether the camera automatically avoids walls.</text>
+<text id="113107">Set strength of controller vibration.</text>
+<text id="114000">Change network settings.</text>
+<text id="114100">Set region for matching.</text>
+<text id="114101">Change options for display of player names.</text>
+<text id="114102">Edit to match with players using the same password.</text>
+<text id="115000">Change language settings. Changes applied on exit.</text>
+<text id="115100">Change text language.</text>
+<text id="115101">Change voice language.</text>
+<text id="211000">Select attribute to boost.</text>
+<text id="211001">%null%</text>
+<text id="211002">%null%</text>
+<text id="211003">%null%</text>
+<text id="211004">%null%</text>
+<text id="211005">%null%</text>
+<text id="211006">%null%</text>
+<text id="211007">%null%</text>
+<text id="211008">%null%</text>
+<text id="211009">%null%</text>
+<text id="211010">Spend Blood Echoes and level up.</text>
+<text id="212000">Select Caryll Rune to remember.</text>
+<text id="212001">Select place to remember.</text>
+<text id="221000">Select weapon to fortify.</text>
+<text id="222000">Select weapon to fuse blood gem.</text>
+<text id="222001">Select place to attach.</text>
+<text id="222002">Select blood gem to fuse.</text>
+<text id="223000">Select item to repair.</text>
+<text id="231100">Select item to buy.</text>
+<text id="231101">Select weapon to use.</text>
+<text id="232100">Select item to sell.</text>
+<text id="241000">Select location to awaken in.</text>
+<text id="251100">Select item to store.</text>
+<text id="251101">%null%</text>
+<text id="251102">%null%</text>
+<text id="251103">%null%</text>
+<text id="251104">%null%</text>
+<text id="251105">%null%</text>
+<text id="251106">%null%</text>
+<text id="251107">%null%</text>
+<text id="251108">%null%</text>
+<text id="251109">%null%</text>
+<text id="251110">Select item to take.</text>
+<text id="262000">Conduct a Chalice Ritual to create a Chalice Dungeon.</text>
+<text id="262001">Find an accessible Chalice Dungeon.</text>
+<text id="262002">Find a Chalice Dungeon using a Chalice Glyph.</text>
+<text id="262003">%null%</text>
+<text id="262004">Share Chalice Dungeon after you have completed ritual.</text>
+<text id="262005">Remove chalice, expunge dungeon, and erase progress.</text>
+<text id="262006">%null%</text>
+<text id="262007">*</text>
+<text id="262008">Expend ritual materials to extract their mysterious haze.</text>
+<text id="262009">%null%</text>
+<text id="262010">%null%</text>
+<text id="262011">%null%</text>
+<text id="262012">%null%</text>
+<text id="262013">%null%</text>
+<text id="262014">*</text>
+<text id="262015">*</text>
+<text id="262101">Select location to awaken in.</text>
+<text id="263000">Select chalice to use in ritual.</text>
+<text id="263001">Select additional rite.</text>
+<text id="263002">Conduct a Chalice Ritual to create a Chalice Dungeon.</text>
+<text id="265000">Share with all online players.</text>
+<text id="265001">Can only be accessed
+using Chalice Glyph.</text>
+<text id="266000">Set Chalice Dungeon search preferences.</text>
+<text id="266001">Search for Chalice Dungeon using set preferences.</text>
+<text id="266002">Results of the Chalice Dungeon search.</text>
+<text id="266100">Set Chalice Dungeon search preferences.</text>
+<text id="266200">Set Chalice Dungeon search preferences.</text>
+<text id="266300">Set Chalice Dungeon search preferences.</text>
+<text id="266400">Set Chalice Dungeon search preferences.</text>
+<text id="269001">Quick-search and join an accessible Chalice Dungeon.</text>
+<text id="269002">Quick-search a Beckoning Bell chime to begin co-op.</text>
+<text id="269003">Quick-search a Sinister Bell chime to become an adversary.</text>
+<text id="269101">Select location to awaken in.</text>
+<text id="271000">Select ritual materials to extract haze from.</text>
+<text id="302000">Select player to part with.</text>
+<text id="302110">Silence Bell and cease requesting co-op.</text>
+<text id="302111">Silence Bell and stop helping other Hunters.</text>
+<text id="302112">Silence Bell and cease threat.</text>
+<text id="302113">This function is not currently available.</text>
+<text id="302114">%null%</text>
+<text id="302115">%null%</text>
+<text id="302116">%null%</text>
+<text id="302117">%null%</text>
+<text id="302118">%null%</text>
+<text id="302119">%null%</text>
+<text id="302120">Disrupt bell resonance with this Hunter.</text>
+<text id="302121">Disrupt bell resonance and return to own world.</text>
+<text id="302122">Disrupt bell resonance and return to own world.</text>
+<text id="302123">This function is not currently available.</text>
+<text id="302124">Disrupt bell resonance and return to own world.</text>
+<text id="305000">Display Vileblood hierarchy.</text>
+<text id="305001">%null%</text>
+<text id="305002">%null%</text>
+<text id="305003">%null%</text>
+<text id="305004">%null%</text>
+<text id="305005">%null%</text>
+<text id="305006">%null%</text>
+<text id="305007">%null%</text>
+<text id="305008">%null%</text>
+<text id="305009">%null%</text>
+<text id="305010">Display Confederate info.</text>
+<text id="305100">Display Vileblood hierarchy.</text>
+<text id="305101">%null%</text>
+<text id="305102">%null%</text>
+<text id="305103">%null%</text>
+<text id="305104">%null%</text>
+<text id="305105">%null%</text>
+<text id="305106">%null%</text>
+<text id="305107">%null%</text>
+<text id="305108">%null%</text>
+<text id="305109">%null%</text>
+<text id="305110">Display Confederate info.</text>
+<text id="310000">Write a note.</text>
+<text id="310001">List of recently written notes.</text>
+<text id="310002">List of recently read notes.</text>
+<text id="321000">Edit note contents.</text>
+<text id="321001">Change bound gesture.</text>
+<text id="321002">Finalize note.</text>
+<text id="321003">%null%</text>
+<text id="321004">Select gesture to bind.</text>
+<text id="321005">Select word category.</text>
+<text id="321006">Select template.</text>
+<text id="321007">Select word.</text>
+<text id="321008">Select conjunction.</text>
+<text id="322000">List of recently written notes.</text>
+<text id="324000">List of recently read notes.</text>
+<text id="402011">Add name to Contract Ledger.</text>
+<text id="402012">Select gender.</text>
+<text id="402013">Enter age.</text>
+<text id="402014">Enter origin.</text>
+<text id="402015">%null%</text>
+<text id="402016">Fine-tune appearance.</text>
+<text id="402017">Finish process.</text>
+<text id="402018">Finish fine-tuning appearance.</text>
+<text id="402201">Male
+Gender has no bearing
+on ability.</text>
+<text id="402202">Female
+Gender has no bearing
+on ability.</text>
+<text id="402301">Young
+Age only affects appearance,
+and has no bearing on ability.</text>
+<text id="402302">Mature
+Age only affects appearance,
+and has no bearing on ability.</text>
+<text id="402303">Aged
+Age only affects appearance,
+and has no bearing on ability.</text>
+<text id="402401">Ordinary, happy upbringing.
+All attributes average.</text>
+<text id="402402">Lone survivor of lost hamlet.
+High life essence and vigor.</text>
+<text id="402403">Suffered misfortune in youth.
+Highly resilient as a result.</text>
+<text id="402404">Terribly violent past.
+Rash, but stronger for it.</text>
+<text id="402405">Born specialist, fit for
+sleuthing or academia.</text>
+<text id="402406">Experienced in war. A soldier
+with strength and skill.</text>
+<text id="402407">Scion to a respectable line
+with faith in your pedigree.</text>
+<text id="402408">Faced terrible hardships, but
+now confident in your purpose.</text>
+<text id="402409">You are nothing. Talentless.
+You shouldn't have been born.</text>
+<text id="402410">(Not Needed)</text>
+<text id="406000">Select profile to load.</text>
+<text id="406001">Select profile to delete.</text>
+<text id="420012">Reset fine-tuned appearance to default.</text>
+<text id="421100">Select build.</text>
+<text id="421101">%null%</text>
+<text id="421102">%null%</text>
+<text id="421103">%null%</text>
+<text id="421104">%null%</text>
+<text id="421105">%null%</text>
+<text id="421106">%null%</text>
+<text id="421107">%null%</text>
+<text id="421108">%null%</text>
+<text id="421109">%null%</text>
+<text id="421110">Average physique.</text>
+<text id="421111">Trim physique.</text>
+<text id="421112">Very trim physique.</text>
+<text id="421113">Muscular physique.</text>
+<text id="421114">Very muscular physique.</text>
+<text id="421115">Top-heavy
+muscular physique.</text>
+<text id="421116">Bottom-heavy
+muscular physique.</text>
+<text id="421117">Proportionally large head.
+Must be full of brains.</text>
+<text id="421118">Proportionally small head.</text>
+<text id="421300">Edit base skin color.</text>
+<text id="422100">Fine-tune build.</text>
+<text id="423100">Select a preset face.</text>
+<text id="423200">Select size of both eyes.</text>
+<text id="423300">Edit color of both eyes.</text>
+<text id="423400">Select brow shape.</text>
+<text id="423500">Edit brow color.</text>
+<text id="423600">Select eyelash shape.</text>
+<text id="423700">Edit eyelash color.</text>
+<text id="424000">Fine-tune facial appearance.</text>
+<text id="424100">Edit facial characteristics.</text>
+<text id="424200">Select randomly generated face.</text>
+<text id="424300">Select face similar to present face.</text>
+<text id="424400">Edit facial shape.</text>
+<text id="424600">Edit skin color and makeup.</text>
+<text id="425100">Edit facial balance.</text>
+<text id="425200">Edit forehead and glabella.</text>
+<text id="425300">Edit brow ridge.</text>
+<text id="425400">Edit eyes.</text>
+<text id="425500">Edit nose ridge.</text>
+<text id="425600">Edit nostrils.</text>
+<text id="425700">Edit cheeks.</text>
+<text id="425800">Edit lips.</text>
+<text id="425900">Edit mouth.</text>
+<text id="426000">Edit chin.</text>
+<text id="426100">Edit jaw.</text>
+<text id="426200">Fine-tune skin color.</text>
+<text id="426300">Edit eye area.</text>
+<text id="426400">Edit lipstick.</text>
+<text id="427100">Select size of right pupil.</text>
+<text id="427200">Edit color of right pupil.</text>
+<text id="427300">Select size of left pupil.</text>
+<text id="427400">Edit color of left pupil.</text>
+<text id="428000">Edit hair/facial hair.</text>
+<text id="428001">Edit hair/brow/eyelashes.</text>
+<text id="428100">Select hair style.</text>
+<text id="428200">Edit hair color.</text>
+<text id="428300">Select beard type.</text>
+<text id="428400">Edit beard color.</text>
+<text id="428700">Edit hair/brow/beard color.</text>
+<text id="428701">Edit hair/brow color.</text>
+<text id="429100">Select appearance of tattoo/mark.</text>
+<text id="429200">Select glasses.</text>
+<text id="430000">Edit tattoo/mark/glasses.</text>
+<text id="430100">Edit tattoo/mark color.</text>
+<text id="430200">Adjust scale and position of tattoo/mark.</text>
+<text id="430300">Set color of glasses.</text>
+<text id="431100">Select voice.</text>
+<text id="431101">%null%</text>
+<text id="431102">%null%</text>
+<text id="431103">%null%</text>
+<text id="431104">%null%</text>
+<text id="431105">%null%</text>
+<text id="431106">%null%</text>
+<text id="431107">%null%</text>
+<text id="431108">%null%</text>
+<text id="431109">%null%</text>
+<text id="431110">Select young voice.</text>
+<text id="431111">%null%</text>
+<text id="431112">%null%</text>
+<text id="431113">%null%</text>
+<text id="431114">%null%</text>
+<text id="431115">%null%</text>
+<text id="431116">%null%</text>
+<text id="431117">%null%</text>
+<text id="431118">%null%</text>
+<text id="431119">%null%</text>
+<text id="431120">Select mature voice.</text>
+<text id="431121">%null%</text>
+<text id="431122">%null%</text>
+<text id="431123">%null%</text>
+<text id="431124">%null%</text>
+<text id="431125">%null%</text>
+<text id="431126">%null%</text>
+<text id="431127">%null%</text>
+<text id="431128">%null%</text>
+<text id="431129">%null%</text>
+<text id="431130">Select aged voice.</text>
+<text id="432100">Load saved favorite.</text>
+<text id="432200">Save present settings as favorite.</text>
+<text id="433000">Edit pupils.</text>
+</entries>
+</fmg>

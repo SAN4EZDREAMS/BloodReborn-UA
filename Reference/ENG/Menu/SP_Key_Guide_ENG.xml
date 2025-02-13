@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fmg>
+<compression>None</compression>
+<version>DarkSouls3</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="1000">L pad button</text>
+<text id="1001">R pad button</text>
+<text id="100000">OK</text>
+<text id="100001">Confirm</text>
+<text id="100002">Use item</text>
+<text id="100003">Edit</text>
+<text id="100004">Add/Remove Rite</text>
+<text id="100005">Add/Remove Rite</text>
+<text id="100006">%null%</text>
+<text id="100007">Discard</text>
+<text id="100008">Equip/Remove</text>
+<text id="100009">Store</text>
+<text id="100010">Take</text>
+<text id="100011">Buy</text>
+<text id="100012">Sell</text>
+<text id="100013">More Info</text>
+<text id="100014">More Info</text>
+<text id="110000">Return</text>
+<text id="110001">Close</text>
+<text id="110002">Cancel</text>
+<text id="120000">Display</text>
+<text id="120001">Test Now</text>
+<text id="120002">Finish</text>
+<text id="120003">Protect ON/OFF</text>
+<text id="120004">Remove</text>
+<text id="120005">Confirm</text>
+<text id="120006">Start ritual</text>
+<text id="120007">Delete</text>
+<text id="120008">Sample</text>
+<text id="120009">Show Self</text>
+<text id="120010">Share Dungeon</text>
+<text id="120011">Show Palette</text>
+<text id="120012">Show Slider</text>
+<text id="130000">Sort</text>
+<text id="130001">Discard all</text>
+<text id="130002">Store all</text>
+<text id="130003">Take all</text>
+<text id="130004">Switch</text>
+<text id="130005">Switch Action</text>
+<text id="130006">Toggle Stats</text>
+<text id="130007">Show Top Rank</text>
+<text id="140000">Change Note Format</text>
+<text id="140001">Show Storage</text>
+<text id="140002">Show Inventory</text>
+<text id="150000">Scroll</text>
+<text id="150001">%null%</text>
+<text id="150002">Change by 10</text>
+<text id="150003">Increase by 10</text>
+<text id="150004">Decrease by 10</text>
+<text id="150005">Page up</text>
+<text id="150006">Page down</text>
+<text id="150007">Store all</text>
+<text id="150008">Retrieve all</text>
+<text id="150009">Repair all</text>
+<text id="150010">Remove</text>
+<text id="150011">Next 100</text>
+<text id="150012">Previous 100</text>
+<text id="150013">Zoom In</text>
+<text id="150014">Zoom Out</text>
+<text id="150015">Change Equip Area</text>
+<text id="150016">Zoom</text>
+<text id="160000">*</text>
+<text id="160001">Quit</text>
+<text id="200000">Select</text>
+<text id="200001">Change</text>
+<text id="200002">*</text>
+<text id="200003">Change no.</text>
+<text id="200004">%null%</text>
+<text id="200005">Adjust</text>
+<text id="200006">Scroll</text>
+<text id="310000">Rotate</text>
+<text id="320000">Help</text>
+<text id="320001">Reset Camera</text>
+<text id="400000">*</text>
+<text id="400001">*</text>
+<text id="400002">*</text>
+<text id="400003">Delete</text>
+<text id="400004">Fine</text>
+<text id="400005">Foul</text>
+<text id="400006">*</text>
+<text id="400007">Controls</text>
+<text id="407000">%null%</text>
+<text id="407001">OK</text>
+</entries>
+</fmg>

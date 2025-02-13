@@ -1,0 +1,769 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fmg>
+<compression>None</compression>
+<version>DarkSouls3</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="1">OK</text>
+<text id="2">CANCEL</text>
+<text id="3">YES</text>
+<text id="4">NO</text>
+<text id="15">RETRY</text>
+<text id="16">CONTINUE</text>
+<text id="17">BACK TO TITLE</text>
+<text id="18">%null%</text>
+<text id="19">%null%</text>
+<text id="20">Yes, I would</text>
+<text id="21">Never</text>
+<text id="22">I will hunt</text>
+<text id="23">I vow not to hunt</text>
+<text id="4001">Failed to connect to Bloodborne server.
+Returning to title menu.</text>
+<text id="4002">%null%</text>
+<text id="4003">%null%</text>
+<text id="4004">%null%</text>
+<text id="4005">%null%</text>
+<text id="4006">Failed to change privacy settings.
+Try again later.</text>
+<text id="4007">Failed to obtain Chalice Dungeon info.
+Try again later.</text>
+<text id="4008">%null%</text>
+<text id="4009">Failed to join Chalice Dungeon.
+Try again later.</text>
+<text id="4010">%null%</text>
+<text id="4011">Failed to contribute ritual materials.
+Try again later.</text>
+<text id="4101">The Bloodborne server administrator has restricted
+this Sony Entertainment Network account's access to multiplayer features.</text>
+<text id="4102">The Bloodborne server administrator has restricted
+this Sony Entertainment Network account's ability to jot down or read notes.</text>
+<text id="4103">The Bloodborne server administrator has restricted
+this Sony Entertainment Network account's Chalice Dungeon functionality.</text>
+<text id="4104">The Bloodborne server administrator has restricted
+this Sony Entertainment Network account's specter functionality.</text>
+<text id="4201">The Bloodborne server is no longer available.
+Returning to title menu.</text>
+<text id="4301">Lost connection to Bloodborne server.
+Returning to title menu.</text>
+<text id="4401">&lt;?ssInfoMsg?&gt;
+Returning to title menu.</text>
+<text id="4402">Failed to resolve Bloodborne server status.
+Returning to title menu.</text>
+<text id="4403">Failed to acquire Bloodborne server information.
+Returning to title menu.</text>
+<text id="4601">Failed to connect to Bloodborne server.
+Returning to title menu.</text>
+<text id="4602">After a period of no access,
+the selected dungeon data was deleted
+from the Bloodborne server.</text>
+<text id="4603">No dungeons found using the given Chalice Glyph.</text>
+<text id="4604">You don't meet the requirements to join the dungeon
+matching this Chalice Glyph.</text>
+<text id="4605">No dungeon found that can be joined.</text>
+<text id="4606">Could not find a Chalice Dungeon matching your criteria.</text>
+<text id="4701">Lost connection to the network.
+Returning to title menu.</text>
+<text id="4801">You have been signed out of "PlayStation Network".
+Returning to title menu.</text>
+<text id="4802">Lost communication with "PlayStation Network".
+Returning to title menu.</text>
+<text id="4803">Your PlayStation®Plus membership has expired.
+Returning to title menu.</text>
+<text id="5001">Session lost.</text>
+<text id="5002">Exiting session due to unstable connection.</text>
+<text id="5003">Network error has occurred. 
+You have been disconnected.</text>
+<text id="40200">Not enough Blood Echoes.</text>
+<text id="40201">%null%</text>
+<text id="40202">%null%</text>
+<text id="40203">Not enough Insight.</text>
+<text id="40300">Restore to default settings?</text>
+<text id="102000">Select quantity of
+&lt;?itemName?&gt;
+to discard.</text>
+<text id="102001">Discard
+&lt;?itemName?&gt;?</text>
+<text id="102002">This will discard selected item.</text>
+<text id="102003">Cannot discard this item.</text>
+<text id="102004">Select quantity of &lt;?itemName?&gt; to use.</text>
+<text id="102005">%null%</text>
+<text id="102006">%null%</text>
+<text id="102007">%null%</text>
+<text id="102008">%null%</text>
+<text id="102009">%null%</text>
+<text id="102010">Cannot discard currently equipped items.</text>
+<text id="102011">%null%</text>
+<text id="102012">%null%</text>
+<text id="102013">%null%</text>
+<text id="102014">%null%</text>
+<text id="102015">%null%</text>
+<text id="102016">%null%</text>
+<text id="102017">%null%</text>
+<text id="102018">%null%</text>
+<text id="102019">%null%</text>
+<text id="102020">Cannot use as item's attribute requirements not met.</text>
+<text id="102021">%null%</text>
+<text id="102022">%null%</text>
+<text id="102023">%null%</text>
+<text id="102024">%null%</text>
+<text id="102025">%null%</text>
+<text id="102026">%null%</text>
+<text id="102027">%null%</text>
+<text id="102028">%null%</text>
+<text id="102029">%null%</text>
+<text id="102030">Using this item has no effect.</text>
+<text id="102031">%null%</text>
+<text id="102032">%null%</text>
+<text id="102033">%null%</text>
+<text id="102034">%null%</text>
+<text id="102035">%null%</text>
+<text id="102036">%null%</text>
+<text id="102037">%null%</text>
+<text id="102038">%null%</text>
+<text id="102039">%null%</text>
+<text id="102040">Fused blood gems will be lost when the item is discarded.
+Okay?</text>
+<text id="102041">%null%</text>
+<text id="102042">%null%</text>
+<text id="102043">%null%</text>
+<text id="102044">%null%</text>
+<text id="102045">%null%</text>
+<text id="102046">%null%</text>
+<text id="102047">%null%</text>
+<text id="102048">%null%</text>
+<text id="102049">%null%</text>
+<text id="102050">This action will exceed maximum Insight.
+Insight exceeding maximum will be lost.
+Still okay to use?</text>
+<text id="102051">This action will exceed maximum blood echoes.
+Blood echoes exceeding maximum will be lost.
+Still okay to use?</text>
+<text id="103000">Cannot equip as item's attribute requirements not met.</text>
+<text id="104000">Cannot equip as item's attribute requirements not met.</text>
+<text id="110000">Exit game and return to title menu?</text>
+<text id="110001">%null%</text>
+<text id="110002">%null%</text>
+<text id="110003">%null%</text>
+<text id="110004">%null%</text>
+<text id="110005">%null%</text>
+<text id="110006">%null%</text>
+<text id="110007">%null%</text>
+<text id="110008">%null%</text>
+<text id="110009">%null%</text>
+<text id="110010">Network cannot be used in offline mode. 
+
+To use network features,
+select Log In from title menu.</text>
+<text id="110011">Network cannot be used in offline mode. 
+
+Please return to title menu and log in
+to make use of network features.</text>
+<text id="114000">User-generated media restrictions
+have been set by parental control.
+Names for other players will be
+limited to online IDs.</text>
+<text id="211000">Spend &lt;?demandSoul?&gt; Blood Echoes
+and level up?</text>
+<text id="211001">OK to cancel edited changes?</text>
+<text id="211002">No attribute selected.</text>
+<text id="211003">%null%</text>
+<text id="211004">%null%</text>
+<text id="211005">%null%</text>
+<text id="211006">%null%</text>
+<text id="211007">%null%</text>
+<text id="211008">%null%</text>
+<text id="211009">%null%</text>
+<text id="211010">Level at maximum.
+Cannot raise level any further.</text>
+<text id="212000">Effect overlaps with memorized Caryll Rune. 
+Overlapping effects will not stack.
+OK?</text>
+<text id="221000">Use &lt;?demandSoul?&gt; Blood Echoes and
+&lt;?demandItemName?&gt; × &lt;?demandItemNum?&gt;
+to fortify weapon?</text>
+<text id="221001">Not enough Blood Echoes or Blood Stones.</text>
+<text id="221002">This weapon is fully upgraded and cannot be
+fortified any further.</text>
+<text id="221003">%null%</text>
+<text id="221004">%null%</text>
+<text id="221005">%null%</text>
+<text id="221006">%null%</text>
+<text id="221007">%null%</text>
+<text id="221008">%null%</text>
+<text id="221009">%null%</text>
+<text id="221010">More Blood Echoes required to fortify.</text>
+<text id="221011">More Blood Stones required to fortify.</text>
+<text id="221012">More Blood Stones and Blood Echoes required to fortify.</text>
+<text id="222000">Cannot remove this blood gem.</text>
+<text id="222001">Removing blood gem.
+Removed blood gem will be lost.</text>
+<text id="222002">Fusing new blood gem over the old.
+Old blood gem will be lost.</text>
+<text id="222003">This blood gem cannot be removed after it is fused.
+Are you sure you want to fuse?</text>
+<text id="222004">Effect overlaps with fused blood gem. 
+Overlapping effects will not stack. 
+OK?</text>
+<text id="222005">Blood gems fused to weapons can only be removed
+by fusing other blood gems</text>
+<text id="222006">Inventory is full.
+Cannot unequip.</text>
+<text id="223000">Repair &lt;?itemName?&gt;
+for &lt;?demandSoul?&gt; Blood Echoes.</text>
+<text id="223001">Repair all of those weapons lost durability
+for &lt;?demandSoul?&gt; Blood Echoes.</text>
+<text id="231000">Select quantity to buy.</text>
+<text id="231001">Buy &lt;?itemName?&gt;
+for &lt;?demandSoul?&gt; Blood Echoes?</text>
+<text id="231002">Buy &lt;?itemName?&gt;
+for &lt;?demandHeroic?&gt; Insight?</text>
+<text id="231003">Receive &lt;?itemName?&gt;?</text>
+<text id="231004">%null%</text>
+<text id="231005">%null%</text>
+<text id="231006">%null%</text>
+<text id="231007">%null%</text>
+<text id="231008">%null%</text>
+<text id="231009">%null%</text>
+<text id="231010">Inventory is full.
+Cannot buy.</text>
+<text id="231011">%null%</text>
+<text id="231012">%null%</text>
+<text id="231013">%null%</text>
+<text id="231014">%null%</text>
+<text id="231015">%null%</text>
+<text id="231016">%null%</text>
+<text id="231017">%null%</text>
+<text id="231018">%null%</text>
+<text id="231019">%null%</text>
+<text id="231020">Items exceeding maximum were
+placed in storage.</text>
+<text id="232000">Select quantity to sell.</text>
+<text id="232001">Sell &lt;?itemName?&gt;
+for &lt;?sellSouls?&gt; Blood Echoes?</text>
+<text id="232002">Cannot sell this item.</text>
+<text id="232003">%null%</text>
+<text id="232004">%null%</text>
+<text id="232005">%null%</text>
+<text id="232006">%null%</text>
+<text id="232007">%null%</text>
+<text id="232008">%null%</text>
+<text id="232009">%null%</text>
+<text id="232010">Cannot sell currently equipped items.</text>
+<text id="232011">Fused blood gems will be lost when the item is sold
+Okay?</text>
+<text id="232012">Fused blood gems will also be sold
+Okay?</text>
+<text id="251000">Select quantity of &lt;?itemName?&gt; to store.</text>
+<text id="251001">Store
+&lt;?itemName?&gt;?</text>
+<text id="251002">Selected item will be placed in storage.</text>
+<text id="251003">Store all
+&lt;?itemName?&gt;?</text>
+<text id="251004">Max quantity of
+&lt;?itemName?&gt;
+was stored.
+Excess items will remain in possession.</text>
+<text id="251005">Unable to store
+&lt;?itemName?&gt;
+as storage will exceed max.</text>
+<text id="251006">Cannot store currently equipped items.</text>
+<text id="251007">As this is a currently set Quick Item,
+all but one have been stored.</text>
+<text id="251008">Selected item
+will be placed in storage.</text>
+<text id="251009">%null%</text>
+<text id="251010">Select quantity of &lt;?itemName?&gt; to retrieve.</text>
+<text id="251011">Retrieve
+&lt;?itemName?&gt;?</text>
+<text id="251012">Return selected item to inventory</text>
+<text id="251013">Retrieve all
+&lt;?itemName?&gt;?</text>
+<text id="251014">Retrieved maximum
+&lt;?itemName?&gt;.
+Excess items will remain stored.</text>
+<text id="251015">Unable to retrieve
+&lt;?itemName?&gt;
+as inventory will exceed max.</text>
+<text id="262000">Remove chalice?
+(This will expunge dungeon and erase progress)</text>
+<text id="262001">Chalice Dungeon Search cannot be used in offline mode. 
+Please return to title menu and log in to make use of 
+network features.</text>
+<text id="262002">Chalice Glyph cannot be used in offline mode. 
+Please return to title menu and log in to make use of 
+network features.</text>
+<text id="262003">Share Chalice Dungeon cannot be used in offline mode. 
+Please return to title menu and log in to make use of 
+network features.</text>
+<text id="262004">%null%</text>
+<text id="262005">Cannot change the privacy setting of a 
+Chalice Dungeon once shared.</text>
+<text id="263000">Confirm settings and start ritual?</text>
+<text id="263001">Conduct a ritual to create a Chalice Dungeon?
+Materials will be consumed.</text>
+<text id="263002">Not enough materials to conduct a ritual.</text>
+<text id="263003">%null%</text>
+<text id="263004">%null%</text>
+<text id="263005">%null%</text>
+<text id="263006">%null%</text>
+<text id="263007">%null%</text>
+<text id="263008">%null%</text>
+<text id="263009">%null%</text>
+<text id="263010">Root Chalice Rituals require a network
+connection to obtain server data.</text>
+<text id="265000">Make public? 
+*Setting is permanent.</text>
+<text id="265001">Make private? 
+*Setting is permanent.</text>
+<text id="265100">Privacy settings complete.</text>
+<text id="266000">Join the selected Chalice Dungeon?</text>
+<text id="266001">You have joined the dungeon,
+and a chalice was placed on the altar.
+You may now explore this Chalice Dungeon.</text>
+<text id="266002">Selected search criteria are not yet unlocked.</text>
+<text id="266003">You conducted a Chalice Ritual.
+You may now search for dungeons
+with the same chalice.</text>
+<text id="266004">You acquired a Root Chalice.
+You may now search for dungeons
+with the same Root Chalice.</text>
+<text id="266005">You conducted a chalice ritual after adding a rite.
+You may now search for dungeons with the same chalice
+and additional rite.</text>
+<text id="267000">A dungeon corresponding to the entered Chalice Glyph
+has been found. Entering corresponding Chalice Dungeon.</text>
+<text id="267001">Search using Chalice Glyph: &lt;?string?&gt;</text>
+<text id="269000">Quick-search and join an accessible Chalice Dungeon? </text>
+<text id="269001">Quick-search a Beckoning Bell chime and begin co-op?</text>
+<text id="269002">Quick-search a Sinister Bell chime and become an adversary?</text>
+<text id="269003">Dungeon quick-search cannot be used in offline mode. 
+Please return to title menu and log in
+to make use of network features.</text>
+<text id="269004">%null%</text>
+<text id="269005">Co-op quick-search cannot be used in offline mode. 
+Please return to title menu and log in
+to make use of network features.</text>
+<text id="269006">Adversarial Quick-search cannot be used in offline mode. 
+Please return to title menu and log in
+to make use of network features.</text>
+<text id="269007">Joining accessible quick-search Chalice Dungeon.
+Chalice was placed on the altar.</text>
+<text id="271000">Select quantity of materials to extract haze from.</text>
+<text id="271001">Extracted haze exceeds maximum.
+Unable to extract further haze.</text>
+<text id="271002">Extracted haze exceeding maximum
+will be put in storage.</text>
+<text id="302000">Return this Hunter to their world?</text>
+<text id="302001">There is no one to part ways with.</text>
+<text id="302110">Stop searching for co-op helpers?</text>
+<text id="302111">Stop searching for hunters from other worlds to help?</text>
+<text id="302112">Stop searching for hunters from other worlds to threaten?</text>
+<text id="302113">The bell does not yet ring.
+This feature is not currently available.</text>
+<text id="302114">%null%</text>
+<text id="302115">%null%</text>
+<text id="302116">%null%</text>
+<text id="302117">%null%</text>
+<text id="302118">%null%</text>
+<text id="302119">%null%</text>
+<text id="302120">%null%</text>
+<text id="302121">%null%</text>
+<text id="302122">%null%</text>
+<text id="302123">No resonance at this time.
+This feature is not currently available.</text>
+<text id="302124">Quit adversarial play and return to own world?</text>
+<text id="302200">Searching for the chime of a Beckoning Bell...</text>
+<text id="302201">Searching for the chime of a Sinister Bell...</text>
+<text id="302202">%null%</text>
+<text id="302203">%null%</text>
+<text id="302204">%null%</text>
+<text id="302205">%null%</text>
+<text id="302206">%null%</text>
+<text id="302207">%null%</text>
+<text id="302208">%null%</text>
+<text id="302209">%null%</text>
+<text id="302210">Searching for the chime of a
+Beckoning Bell with matching password.</text>
+<text id="305000">Cannot view Vileblood Register in offline mode.</text>
+<text id="305001">Failed to obtain register information.</text>
+<text id="305002">Finish viewing Vileblood Register</text>
+<text id="305003">Acquiring register info...</text>
+<text id="305004">%null%</text>
+<text id="305005">%null%</text>
+<text id="305006">%null%</text>
+<text id="305007">%null%</text>
+<text id="305008">%null%</text>
+<text id="305009">%null%</text>
+<text id="305010">Cannot check League Directory in offline mode.</text>
+<text id="305011">Failed to acquire directory info.</text>
+<text id="305012">Exit League Directory</text>
+<text id="305013">Acquiring directory info...</text>
+<text id="310000">You haven't written any notes.</text>
+<text id="310001">No recently read notes.</text>
+<text id="311000">Delete this note?</text>
+<text id="311001">This is a fine note.</text>
+<text id="311002">This is a foul note.</text>
+<text id="321000">Note will be written with current content.</text>
+<text id="322000">Delete this note from list?</text>
+<text id="400001">Failed to load save data.</text>
+<text id="400002">Save data is corrupted.</text>
+<text id="400003">At the end of the previous session,
+Exit Game (system menu) may not have been selected.
+
+Failure to end session with Exit Game may result
+in loss of progress.</text>
+<text id="401001">Returning to title menu.</text>
+<text id="401002">Starting game in offline mode. 
+
+To use network features, check to see 
+if your connection is set up properly, 
+and select Log In from title menu.</text>
+<text id="401003">%null%</text>
+<text id="401004">%null%</text>
+<text id="401005">%null%</text>
+<text id="401006">%null%</text>
+<text id="401007">%null%</text>
+<text id="401008">%null%</text>
+<text id="401009">%null%</text>
+<text id="401010">Play in online mode?</text>
+<text id="401011">Lost connection to the network. 
+Switching to offline mode. 
+To use network features, check to see 
+if your connection is set up properly, 
+and select Log In from title menu.</text>
+<text id="401012">You have been signed out of "PlayStation Network".
+Switching to offline mode.
+
+To use network features, check to see
+if your connection is set up properly,
+and select Log In from title menu.</text>
+<text id="401013">Lost communication with "PlayStation Network". 
+Switching to offline mode.
+
+To use network features, check to see 
+if your connection is set up properly, 
+and select Log In from title menu.</text>
+<text id="401102">Failed to create save data.
+Press OK to try again.</text>
+<text id="401103">Failed to load save data.
+Press OK to try again.</text>
+<text id="401104">The save data is corrupted.
+Delete and create new data?</text>
+<text id="401105">Failed to delete save data.
+Press OK to try again.</text>
+<text id="401106">Failed to update save data.
+Press OK to try again.</text>
+<text id="401107">The save data is corrupted.
+Recreate save data?</text>
+<text id="401108">This save data is for a newer version of the game. To use this save data, quit the application, apply the latest update file, and restart.</text>
+<text id="401109">Unable to locate Bloodborne: The Old Hunters DLC. This save data cannot be used until the DLC is downloaded again.</text>
+<text id="401170">You lack the license for this DLC.
+Configured DLC elements will be disabled.</text>
+<text id="401171">DLC data is corrupted.
+Delete the data on the system
+and download again.</text>
+<text id="401172">Failed to load DLC.
+Select OK to try again.</text>
+<text id="401201">Unable to connect to the network.
+Please check your network settings.</text>
+<text id="401202">Network status check failed.</text>
+<text id="401203">You are currently not signed into "PlayStation Network".
+Please sign in to use the online features.</text>
+<text id="401204">Sign in status check failed.</text>
+<text id="401205">Unable to use network features due to age restrictions.</text>
+<text id="401206">A new version of the system software is available. To use
+network features, please update the system software.</text>
+<text id="401207">An update to the game is available. To use network
+features, please install the update and restart the game.</text>
+<text id="401208">Network features check failed.</text>
+<text id="401209">Failed to acquire parental control information.</text>
+<text id="401210">Failed to acquire Bloodborne server information.
+Select "OK" to try again.</text>
+<text id="401211">Failed to resolve Bloodborne
+server status.</text>
+<text id="401212">&lt;?ssInfoMsg?&gt;</text>
+<text id="401213">You are currently offline.</text>
+<text id="401214">Online status check failed.</text>
+<text id="401402">Staring game without contacting server.
+
+Select Log In from title menu in order to
+play with online features.</text>
+<text id="401403">%null%</text>
+<text id="401404">%null%</text>
+<text id="401405">%null%</text>
+<text id="401406">%null%</text>
+<text id="401407">%null%</text>
+<text id="401408">%null%</text>
+<text id="401409">%null%</text>
+<text id="401410">%null%</text>
+<text id="401411">Terms of service have changed. 
+
+Please reacquaint yourself with the
+terms of the agreement.</text>
+<text id="401501">A network error occurred.
+Select "OK" to try again.</text>
+<text id="401502">Bloodborne server usage for this
+user has been terminated.</text>
+<text id="401503">Failed to log in to Bloodborne server.
+Select "OK" to attempt to log in again.</text>
+<text id="401504">%null%</text>
+<text id="401505">%null%</text>
+<text id="401506">%null%</text>
+<text id="401507">%null%</text>
+<text id="401508">%null%</text>
+<text id="401509">%null%</text>
+<text id="401510">%null%</text>
+<text id="401511">This version of the game cannot
+contact the Bloodborne server.
+Please download the latest update
+in order to use network features.</text>
+<text id="401601">Failed to acquire information.
+Select "OK" to try again.</text>
+<text id="401602">%null%</text>
+<text id="401603">Could not verify PlayStation®Plus on your account.</text>
+<text id="401604">Online play has been suspended as PlayStation®Plus
+could not be authenticated on your account.</text>
+<text id="401605">Failed to verify your PlayStation®Plus membership.
+Press OK to try PlayStation®Plus verification again.
+Press CANCEL to continue without verification.
+Please note you cannot play online without verification.</text>
+<text id="401606">Failed to verify your PlayStation®Plus membership.
+Press OK to try PlayStation®Plus verification again.
+Press CANCEL to continue without verification.
+Please note you cannot play online without verification.</text>
+<text id="401607">Not yet able to verify PlayStation®Plus on your account.
+Staring game in offline mode.</text>
+<text id="401701">Cannot create any more profiles.
+Delete an existing profile and create a new one?
+
+Note: You may create up to 10 profiles.</text>
+<text id="401731">Failed to reset online character data to default.
+Select RETRY to try again.
+
+To continue without network features, select CONTINUE.</text>
+<text id="401732">Could not save character data.
+Select RETRY to try again.
+
+To return to title menu, select BACK TO TITLE.</text>
+<text id="401733">Failed to record note search information.
+Select RETRY to try again.
+
+To continue without network features, select CONTINUE.</text>
+<text id="401734">%null%</text>
+<text id="401735">Failed to record messengers information.
+Select RETRY to try again.
+
+To continue without network features, select CONTINUE.</text>
+<text id="401801">Waiting for trophy info update to finish.</text>
+<text id="401802">%null%</text>
+<text id="401803">%null%</text>
+<text id="401804">%null%</text>
+<text id="401805">%null%</text>
+<text id="401806">%null%</text>
+<text id="401807">%null%</text>
+<text id="401808">%null%</text>
+<text id="401809">%null%</text>
+<text id="401810">%null%</text>
+<text id="401811">Starting game in offline mode as game
+has not been fully installed.</text>
+<text id="401901">Failed to retrieve data from Bloodborne server
+as you have been refused permission.</text>
+<text id="401902">You cannot access the Bloodborne server.</text>
+<text id="401903">Your connection to the Bloodborne server
+has been interrupted.</text>
+<text id="401904">Failed to communicate with the Bloodborne server.
+Select OK to try again.</text>
+<text id="401905">%null%</text>
+<text id="401906">%null%</text>
+<text id="401907">%null%</text>
+<text id="401908">%null%</text>
+<text id="401909">%null%</text>
+<text id="401910">%null%</text>
+<text id="401911">Failed to retrieve data from Bloodborne server
+as you have been refused permission.</text>
+<text id="401912">You cannot access the Bloodborne server.</text>
+<text id="401913">Your connection to the Bloodborne server
+has been interrupted.</text>
+<text id="401914">Failed to communicate with the Bloodborne server.
+Select OK to try again.</text>
+<text id="401991">Process failed.
+Returning to title menu.</text>
+<text id="401992">%null%</text>
+<text id="401993">%null%</text>
+<text id="401994">%null%</text>
+<text id="401995">%null%</text>
+<text id="401996">%null%</text>
+<text id="401997">%null%</text>
+<text id="401998">%null%</text>
+<text id="401999">%null%</text>
+<text id="402000">%null%</text>
+<text id="402001">Withdraw from contract
+and return to title menu?</text>
+<text id="402002">Finalize contract?</text>
+<text id="402003">A name is required.
+
+Enter a name to finalize the contract.</text>
+<text id="402004">Failed to save contract.</text>
+<text id="402005">%null%</text>
+<text id="402006">%null%</text>
+<text id="402007">%null%</text>
+<text id="402008">%null%</text>
+<text id="402009">%null%</text>
+<text id="402010">Return all changes to character to default?</text>
+<text id="402011">%null%</text>
+<text id="402012">%null%</text>
+<text id="402013">%null%</text>
+<text id="402014">%null%</text>
+<text id="402015">%null%</text>
+<text id="402016">%null%</text>
+<text id="402017">%null%</text>
+<text id="402018">%null%</text>
+<text id="402019">%null%</text>
+<text id="402020">Selected spelling contained inappropriate language
+and could not be used as a character name.
+
+Enter another name.</text>
+<text id="402021">%null%</text>
+<text id="402022">%null%</text>
+<text id="402023">%null%</text>
+<text id="402024">%null%</text>
+<text id="402025">%null%</text>
+<text id="402026">%null%</text>
+<text id="402027">%null%</text>
+<text id="402028">%null%</text>
+<text id="402029">%null%</text>
+<text id="402030">Changing gender will reset certain changes.
+
+Is this OK?</text>
+<text id="402100">Finalize editing?</text>
+<text id="404001">Stop initial set up and return to title menu?</text>
+<text id="404002">Failed to save settings.
+Select RETRY to try again.
+
+To continue without saving, select CONTINUE.</text>
+<text id="404003">%null%</text>
+<text id="404004">%null%</text>
+<text id="404005">%null%</text>
+<text id="404006">%null%</text>
+<text id="404007">%null%</text>
+<text id="404008">%null%</text>
+<text id="404009">%null%</text>
+<text id="404010">Discard present changes and return?</text>
+<text id="406011">Start with selected profile?</text>
+<text id="406012">Delete selected profile and begin a new game?</text>
+<text id="406013">OK to delete selected profile?</text>
+<text id="406014">%null%</text>
+<text id="406015">%null%</text>
+<text id="406016">%null%</text>
+<text id="406017">%null%</text>
+<text id="406018">%null%</text>
+<text id="406019">%null%</text>
+<text id="406020">Game install incomplete. 
+Cannot load save data created by
+a fully installed game.</text>
+<text id="406021">Game install incomplete. 
+Cannot load save data.</text>
+<text id="420000">Save the present settings as a favorite?</text>
+<text id="420001">A favorite already exists for these settings. 
+Save and overwrite present settings?</text>
+<text id="420002">Discard present changes and load favorite?</text>
+<text id="420003">%null%</text>
+<text id="420004">%null%</text>
+<text id="420005">%null%</text>
+<text id="420006">%null%</text>
+<text id="420007">%null%</text>
+<text id="420008">%null%</text>
+<text id="420009">%null%</text>
+<text id="420010">No favorites saved.</text>
+<text id="506000">Some items could not be acquired as they would
+exceed max for inventory or storage.</text>
+<text id="506001">Unable to acquire &lt;?itemName?&gt;
+due to inventory or storage max.</text>
+<text id="506002">Unable to acquire every &lt;?itemName?&gt;
+due to inventory or storage max.</text>
+<text id="600000">*</text>
+<text id="600001">*</text>
+<text id="600002">*</text>
+<text id="600003">*</text>
+<text id="600100">*</text>
+<text id="600101">*</text>
+<text id="600102">*</text>
+<text id="600103">*</text>
+<text id="600200">*</text>
+<text id="600201">*</text>
+<text id="600202">*</text>
+<text id="600203">*</text>
+<text id="600300">*</text>
+<text id="600301">*</text>
+<text id="600302">*</text>
+<text id="600303">*</text>
+<text id="600400">*</text>
+<text id="600401">*</text>
+<text id="600402">*</text>
+<text id="600403">*</text>
+<text id="600500">*</text>
+<text id="600501">*</text>
+<text id="600502">*</text>
+<text id="600503">*</text>
+<text id="600600">*</text>
+<text id="600601">*</text>
+<text id="600602">*</text>
+<text id="600603">*</text>
+<text id="601000">*</text>
+<text id="601001">*</text>
+<text id="601002">*</text>
+<text id="601003">*</text>
+<text id="601100">*</text>
+<text id="601101">*</text>
+<text id="601102">*</text>
+<text id="601103">*</text>
+<text id="601200">*</text>
+<text id="601201">*</text>
+<text id="601202">*</text>
+<text id="601203">*</text>
+<text id="601300">*</text>
+<text id="601301">*</text>
+<text id="601302">*</text>
+<text id="601303">*</text>
+<text id="601400">*</text>
+<text id="601401">*</text>
+<text id="601402">*</text>
+<text id="601403">*</text>
+<text id="601500">*</text>
+<text id="601501">*</text>
+<text id="601502">*</text>
+<text id="601503">*</text>
+<text id="601600">*</text>
+<text id="601601">*</text>
+<text id="601602">*</text>
+<text id="601603">*</text>
+<text id="602000">*</text>
+<text id="602001">*</text>
+<text id="602002">*</text>
+<text id="602003">*</text>
+<text id="602100">*</text>
+<text id="602101">*</text>
+<text id="602102">*</text>
+<text id="602103">*</text>
+<text id="602200">*</text>
+<text id="602201">*</text>
+<text id="602202">*</text>
+<text id="602203">*</text>
+<text id="602300">*</text>
+<text id="602301">*</text>
+<text id="602302">*</text>
+<text id="602303">*</text>
+<text id="602400">*</text>
+<text id="602401">*</text>
+<text id="602402">*</text>
+<text id="602403">*</text>
+<text id="602500">*</text>
+<text id="602501">*</text>
+<text id="602502">*</text>
+<text id="602503">*</text>
+<text id="602600">*</text>
+<text id="602601">*</text>
+<text id="602602">*</text>
+<text id="602603">*</text>
+</entries>
+</fmg>
