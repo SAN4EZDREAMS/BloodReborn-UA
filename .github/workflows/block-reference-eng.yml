@@ -21,14 +21,20 @@ jobs:
         git checkout ${{ github.head_ref }}  # Перемикаємось на гілку, з якої створено пул-реквест
         git pull origin ${{ github.head_ref }}  # Отримуємо останні зміни з цієї гілки
 
-    # Крок 3: Видалення папки Reference/ENG та її вмісту
+    # Крок 3: Налаштування користувача Git
+    - name: Set git user
+      run: |
+        git config --global user.email "${{ github.actor }}@users.noreply.github.com"  # Автоматичне отримання пошти
+        git config --global user.name "${{ github.actor }}"  # Використовуємо ім'я користувача GitHub
+
+    # Крок 4: Видалення папки Reference/ENG та її вмісту
     - name: Remove Reference/ENG folder
       run: |
         rm -rf Reference/ENG  # Видаляє папку та її вміст, якщо вона є
         git add .  # Додає зміни до коміту
         git commit -m "Automatically removed Reference/ENG" || echo "No changes to commit"
 
-    # Крок 4: Пуш змін до віддаленого репозиторію
+    # Крок 5: Пуш змін до віддаленого репозиторію
     - name: Push changes
       run: |
         git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.head_ref }}
