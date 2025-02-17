@@ -14,12 +14,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    # Крок 2: Отримання останніх змін з віддаленого репозиторію та злиття з main
+    # Крок 2: Отримання останніх змін з віддаленого репозиторію
     - name: Fetch latest changes from origin
       run: |
         git fetch origin
-        git checkout main
-        git pull origin main  # Отримуємо останні зміни з main
+        git checkout ${{ github.head_ref }}  # Перемикаємось на гілку, з якої створено пул-реквест
+        git pull origin ${{ github.head_ref }}  # Отримуємо останні зміни з цієї гілки
 
     # Крок 3: Видалення папки Reference/ENG та її вмісту
     - name: Remove Reference/ENG folder
