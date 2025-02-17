@@ -1,0 +1,20 @@
+name: Remove Reference/ENG in PRs
+
+on:
+  pull_request:
+    branches:
+      - main  # Запускається при будь-яких PR у main
+
+jobs:
+  remove-ref-eng:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Завантажує код PR
+
+      - name: Remove Reference/ENG if exists
+        run: |
+          rm -rf Reference/ENG  # Видаляє папку та її вміст, якщо вона є
+          git rm -r --ignore-unmatch Reference/ENG
+          git commit -m "Automatically removed Reference/ENG" || echo "No changes to commit"
+          git push origin HEAD:${{ github.head_ref }}
