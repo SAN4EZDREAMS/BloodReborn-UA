@@ -1,25 +1,34 @@
-name: Remove Reference/ENG in PRs
+name: Remove Reference/ENG Folder
 
 on:
   pull_request:
     branches:
-      - main  # Запускається при будь-яких PR у main
+      - main
 
 jobs:
-  remove-ref-eng:
+  remove-folder:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4  # Завантажує код PR
+    # Крок 1: Checkout репозиторію
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up Git identity
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
+    # Крок 2: Отримання останніх змін з віддаленого репозиторію та злиття з main
+    - name: Fetch latest changes from origin
+      run: |
+        git fetch origin
+        git checkout main
+        git pull origin main  # Отримуємо останні зміни з main
 
-      - name: Remove Reference/ENG if exists
-        run: |
-          rm -rf Reference/ENG  # Видаляє папку та її вміст, якщо вона є
-          git rm -r --ignore-unmatch Reference/ENG
-          git commit -m "Automatically removed Reference/ENG" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.head_ref }}
+    # Крок 3: Видалення папки Reference/ENG та її вмісту
+    - name: Remove Reference/ENG folder
+      run: |
+        rm -rf Reference/ENG  # Видаляє папку та її вміст, якщо вона є
+        git add .  # Додає зміни до коміту
+        git commit -m "Automatically removed Reference/ENG" || echo "No changes to commit"
+
+    # Крок 4: Пуш змін до віддаленого репозиторію
+    - name: Push changes
+      run: |
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.head_ref }}
