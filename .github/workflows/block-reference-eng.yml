@@ -12,9 +12,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4  # Завантажує код PR
 
+      - name: Set up Git identity
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
       - name: Remove Reference/ENG if exists
         run: |
           rm -rf Reference/ENG  # Видаляє папку та її вміст, якщо вона є
           git rm -r --ignore-unmatch Reference/ENG
           git commit -m "Automatically removed Reference/ENG" || echo "No changes to commit"
-          git push origin HEAD:${{ github.head_ref }}
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.head_ref }}
