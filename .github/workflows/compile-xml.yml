@@ -11,25 +11,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Debug cache keys
-        run: |
-          echo "Expected Key: item-menu-msgbnd-${{ hashFiles('item-msgbnd\', 'menu-msgbnd\') }}"
-        shell: bash
-
-      - name: Chache restore
-        uses: actions/cache@v3
+      - name: Download processed XML files
+        uses: actions/download-artifact@v2
         with:
-          path: |
-            ${{ github.workspace }}item-msgbnd\
-            ${{ github.workspace }}menu-msgbnd\
-          key: item-menu-msgbnd-${{ hashFiles('item-msgbnd\**', 'menu-msgbnd\**') }}
-          restore-keys: |
-            item-menu-msgbnd-
+          name: processed-xml-files
+          path: ./downloaded_files
 
-      - name: Використовування файлів
+      - name: Compile XML files
         run: |
-          dir path/to/item-msgbnd
-          dir path/to/menu-msgbnd
+          echo "Processing files from ./downloaded_files"
+          dir ./downloaded_files/item-msgbnd
+          dir ./downloaded_files/menu-msgbnd
 
       - name: Show current working directory
         run: |
