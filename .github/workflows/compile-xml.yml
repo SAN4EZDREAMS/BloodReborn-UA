@@ -13,16 +13,16 @@ jobs:
 
       - name: Debug cache keys
         run: |
-          echo "Expected Key: item-menu-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}"
+          echo "Expected Key: item-menu-msgbnd-${{ hashFiles('item-msgbnd\', 'menu-msgbnd\') }}"
         shell: bash
 
       - name: Chache restore
         uses: actions/cache@v3
         with:
           path: |
-            ${{ github.workspace }}/item-msgbnd/
-            ${{ github.workspace }}/menu-msgbnd/
-          key: item-menu-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
+            ${{ github.workspace }}item-msgbnd\
+            ${{ github.workspace }}menu-msgbnd\
+          key: item-menu-msgbnd-${{ hashFiles('item-msgbnd\**', 'menu-msgbnd\**') }}
           restore-keys: |
             item-menu-msgbnd-
 

@@ -423,9 +423,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            ${{ github.workspace }}/item-msgbnd/
-            ${{ github.workspace }}/menu-msgbnd/
-          key: item-menu-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
+            ${{ github.workspace }}./item-msgbnd/
+            ${{ github.workspace }}./menu-msgbnd/
+          key: item-menu-msgbnd-${{ hashFiles('./item-msgbnd/**', './menu-msgbnd/**') }}
           restore-keys: |
             item-menu-msgbnd-
 
