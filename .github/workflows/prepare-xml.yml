@@ -397,7 +397,7 @@ jobs:
           SP_System_Message_win64.xml|SP_システムメッセージ_win64.fmg.xml
           System_Message_win64.xml|システムメッセージ_win64.fmg.xml
           EOF
-          
+
       - name: Rename XML files based on item mapping
         run: |
           cd item-msgbnd/msg/rusRU/64bit
