@@ -431,8 +431,8 @@ jobs:
 
       - name: Check files
         run: |
-            ls path/to/item-msgbnd/**
-            ls path/to/menu-msgbnd/**
+            ls path/to/item-msgbnd
+            ls item-msgbnd/msg/rusRU/64bit
 
 # Not needed now.
 
