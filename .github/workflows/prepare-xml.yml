@@ -425,9 +425,9 @@ jobs:
           path: |
             path/to/item-msgbnd
             path/to/menu-msgbnd
-          key: ${{ runner.os }}-item-msgbnd-${{ hashFiles('path/to/item-msgbnd/**/*') }}
+          key: Ubuntu-item-msgbnd-${{ hashFiles('path/to/item-msgbnd/**/*') }}
           restore-keys: |
-            ${{ runner.os }}-item-msgbnd-
+            Ubuntu-item-msgbnd-
 
 # Not needed now.
 
