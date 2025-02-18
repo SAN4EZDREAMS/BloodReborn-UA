@@ -425,9 +425,9 @@ jobs:
           path: |
             ${{ github.workspace }}/item-msgbnd/
             ${{ github.workspace }}/menu-msgbnd/
-          key: ${{ runner.os }}-item-menu-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
+          key: item-menu-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
           restore-keys: |
-            ${{ runner.os }}-item-menu-msgbnd-
+            item-menu-msgbnd-
 
 # Not needed now.
 

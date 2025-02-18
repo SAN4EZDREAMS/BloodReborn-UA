@@ -11,15 +11,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Debug cache keys
+        run: |
+          echo "Expected Key: item-menu-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}"
+        shell: bash
+
       - name: Chache restore
         uses: actions/cache@v3
         with:
           path: |
             ${{ github.workspace }}/item-msgbnd/
             ${{ github.workspace }}/menu-msgbnd/
-          key: ${{ runner.os }}-item-menu-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
+          key: item-menu-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
           restore-keys: |
-            ${{ runner.os }}-item-menu-msgbnd-
+            item-menu-msgbnd-
 
       - name: Використовування файлів
         run: |
