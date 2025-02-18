@@ -24,9 +24,16 @@ jobs:
           dir ./downloaded_files/menu-msgbnd
 
       - name: Delete artifact after use
-        uses: jlumbroso/delete-artifact@v2
-        with:
-          name: processed-xml-files
+        run: |
+          ARTIFACT_ID=$(gh api repos/${{ github.repository }}/actions/artifacts --jq '.artifacts[] | select(.name=="processed-xml-files") | .id')
+          if [ -n "$ARTIFACT_ID" ]; then
+            gh api --method DELETE repos/${{ github.repository }}/actions/artifacts/$ARTIFACT_ID
+            echo "Artifact deleted"
+          else
+            echo "Artifact not found"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: List all files in repository
         run: |
