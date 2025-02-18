@@ -17,9 +17,14 @@ jobs:
           path: |
             path/to/item-msgbnd
             path/to/menu-msgbnd
-          key: ${{ runner.os }}-item-msgbnd-${{ github.sha }}
+          key: ${{ runner.os }}-item-msgbnd-${{ hashFiles('path/to/item-msgbnd/**/*') }}  # Використовуємо hashFiles для уникнення проблем із ключами
           restore-keys: |
             ${{ runner.os }}-item-msgbnd-
+
+      - name: Використовування файлів
+        run: |
+          dir path/to/item-msgbnd
+          dir path/to/menu-msgbnd
 
       - name: Show current working directory
         run: |
