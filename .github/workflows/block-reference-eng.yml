@@ -13,7 +13,27 @@ jobs:
 
       - name: Find and remove specific files
         run: |
-          files_to_check=("Accessory_Description_ENG.xml" "Accessory_Name_ENG.xml" "Accessory_Stock_ENG.xml" "Armor_Description_ENG.xml" "Armor_Name_ENG.xml" "Item_Description_ENG.xml" "Item_Name_ENG.xml" "Item_Necessities_ENG.xml" "Magic_Explanation_ENG.xml" "Magic_Name_ENG.xml" "NPC_Name_ENG.xml" "One's_Vast_Knowledge_of_Magic_ENG.xml" "One's_Vast_Stock_of_Knowledge_About_Armor_ENG.xml" "One's_Vast_Stock_of_Knowledge_About_Weapons_ENG.xml" "Place_Name_ENG.xml" "Weapon_Name_ENG.xml" "Weapons_Description_ENG.xml" "Bloodstained_Lettering_ENG.xml" Cause_of_Death_ENG.xml" "Conversation_ENG.xml" "Dialog_ENG.xml" "Event_Text_ENG.xml" "Ingame_Menu_ENG.xml" "Key_Guide_ENG.xml" "List_of_Tags_for_Text_Display_ENG.xml" "Magic_Stone_Explanation_ENG.xml" "Magic_Stone_Prefix_ENG.xml" "Magical_Stone_Effect_ENG.xml" "Menu_Common_Text_ENG.xml" "Menu_and_Others_ENG.xml" "Model_Tag_win64_ENG.xml" "Movie_Subtitles_ENG.xml" "Name_of_a_Magical_Being_ENG.xml" "One's_Vast_Stock_of_Knowledge_About_Magic_and_Stone_ENG.xml" "One_Line_Help_ENG.xml" "SP_Dialog_ENG.xml" "SP_Key_Guide_ENG.xml" "SP_Menu_Text_ENG.xml" "SP_One_Line_Help_ENG.xml" "SP_System_Message_win64_ENG.xml" "System_Message_win64_ENG.xml" "NPC名.fmg.xml" "アイテムうんちく.fmg.xml" "アイテム名.fmg.xml" "アイテム説明.fmg.xml" "アクセサリうんちく.fmg.xml" "アクセサリ名.fmg.xml" "アクセサリ説明.fmg.xml" "地名.fmg.xml" "武器うんちく.fmg.xml" "武器名.fmg.xml" "武器説明.fmg.xml" "防具うんちく.fmg.xml" "防具名.fmg.xml" "防具説明.fmg.xml" "魔法うんちく.fmg.xml" "魔法名.fmg.xml" "魔法説明.fmg.xml" "SP_キーガイド.fmg.xml" "SP_システムメッセージ_win64.fmg.xml" "SP_ダイアログ.fmg.xml" "SP_メニューテキスト.fmg.xml" "SP_一行ヘルプ.fmg.xml" "イベントテキスト.fmg.xml" "インゲームメニュー.fmg.xml" "キーガイド.fmg.xml" "システムメッセージ_win64.fmg.xml" "ダイアログ.fmg.xml" "テキスト表示用タグ一覧.fmg.xml" "ムービー字幕.fmg.xml" "メニューその他.fmg.xml" "メニュー共通テキスト.fmg.xml" "一行ヘルプ.fmg.xml" "会話.fmg.xml" "機種別タグ_win64.fmg.xml" "死因.fmg.xml" "血文字.fmg.xml" "魔石うんちく.fmg.xml" "魔石効果.fmg.xml" "魔石名.fmg.xml" "魔石接頭語.fmg.xml" "魔石説明.fmg.xml")
+          files_to_check=(
+            "Accessory_Description_ENG.xml" "Accessory_Name_ENG.xml" "Accessory_Stock_ENG.xml" "Armor_Description_ENG.xml" "Armor_Name_ENG.xml" 
+            "Item_Description_ENG.xml" "Item_Name_ENG.xml" "Item_Necessities_ENG.xml" "Magic_Explanation_ENG.xml" "Magic_Name_ENG.xml"
+            "NPC_Name_ENG.xml" "One\'s_Vast_Knowledge_of_Magic_ENG.xml" "One\'s_Vast_Stock_of_Knowledge_About_Armor_ENG.xml" 
+            "One\'s_Vast_Stock_of_Knowledge_About_Weapons_ENG.xml" "Place_Name_ENG.xml" "Weapon_Name_ENG.xml" "Weapons_Description_ENG.xml"
+            "Bloodstained_Lettering_ENG.xml" "Cause_of_Death_ENG.xml" "Conversation_ENG.xml" "Dialog_ENG.xml" "Event_Text_ENG.xml" 
+            "Ingame_Menu_ENG.xml" "Key_Guide_ENG.xml" "List_of_Tags_for_Text_Display_ENG.xml" "Magic_Stone_Explanation_ENG.xml" 
+            "Magic_Stone_Prefix_ENG.xml" "Magical_Stone_Effect_ENG.xml" "Menu_Common_Text_ENG.xml" "Menu_and_Others_ENG.xml" 
+            "Model_Tag_win64_ENG.xml" "Movie_Subtitles_ENG.xml" "Name_of_a_Magical_Being_ENG.xml" "One\'s_Vast_Stock_of_Knowledge_About_Magic_and_Stone_ENG.xml"
+            "One_Line_Help_ENG.xml" "SP_Dialog_ENG.xml" "SP_Key_Guide_ENG.xml" "SP_Menu_Text_ENG.xml" "SP_One_Line_Help_ENG.xml" 
+            "SP_System_Message_win64_ENG.xml" "System_Message_win64_ENG.xml" "NPC名.fmg.xml" "アイテムうんちく.fmg.xml" "アイテム名.fmg.xml" 
+            "アイテム説明.fmg.xml" "アクセサリうんちく.fmg.xml" "アクセサリ名.fmg.xml" "アクセサリ説明.fmg.xml" "地名.fmg.xml"
+            "武器うんちく.fmg.xml" "武器名.fmg.xml" "武器説明.fmg.xml" "防具うんちく.fmg.xml" "防具名.fmg.xml" "防具説明.fmg.xml"
+            "魔法うんちく.fmg.xml" "魔法名.fmg.xml" "魔法説明.fmg.xml" "SP_キーガイド.fmg.xml" "SP_システムメッセージ_win64.fmg.xml" 
+            "SP_ダイアログ.fmg.xml" "SP_メニューテキスト.fmg.xml" "SP_一行ヘルプ.fmg.xml" "イベントテキスト.fmg.xml" 
+            "インゲームメニュー.fmg.xml" "キーガイド.fmg.xml" "システムメッセージ_win64.fmg.xml" "ダイアログ.fmg.xml" 
+            "テキスト表示用タグ一覧.fmg.xml" "ムービー字幕.fmg.xml" "メニューその他.fmg.xml" "メニュー共通テキスト.fmg.xml" 
+            "一行ヘルプ.fmg.xml" "会話.fmg.xml" "機種別タグ_win64.fmg.xml" "死因.fmg.xml" "血文字.fmg.xml" "魔石うんちく.fmg.xml" 
+            "魔石効果.fmg.xml" "魔石名.fmg.xml" "魔石接頭語.fmg.xml" "魔石説明.fmg.xml"
+            )
+
           files_found=0
 
           for file in "${files_to_check[@]}"; do
