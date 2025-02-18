@@ -13,7 +13,7 @@ jobs:
 
       - name: List directory structure
         run: |
-          dir /s /b
+          Get-ChildItem -Recurse | Select-Object FullName
 
       - name: Check if directory exists
         run: |
