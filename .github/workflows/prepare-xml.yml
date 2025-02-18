@@ -425,14 +425,16 @@ jobs:
           path: |
             path/to/item-msgbnd
             path/to/menu-msgbnd
-          key: ${{ runner.os }}-item-msgbnd-${{ github.sha }}
+          key: ${{ runner.os }}-item-msgbnd-${{ hashFiles('path/to/item-msgbnd/**/*') }}
           restore-keys: |
             ${{ runner.os }}-item-msgbnd-
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: processed-xml-files
-          path: |
-            item-msgbnd/**
-            menu-msgbnd/**
+# Not needed now.
+
+ #     - name: Upload artifact
+ #       uses: actions/upload-artifact@v4
+ #       with:
+ #         name: processed-xml-files
+ #         path: |
+ #           item-msgbnd/**
+ #           menu-msgbnd/**
