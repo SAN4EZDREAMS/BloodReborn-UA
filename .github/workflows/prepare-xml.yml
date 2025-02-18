@@ -22,7 +22,7 @@ jobs:
           mkdir -p $MENU_DIR
           echo "$ITEM_DIR"
           echo "$MENU_DIR"
-          mv "Item/Accessory_Description.xml" "$ITEM_DIR/"
+          mv Item/Accessory_Description.xml $ITEM_DIR/
           mv Item/Accessory_Name.xml $ITEM_DIR/
           mv Item/Accessory_Stock.xml $ITEM_DIR/
           mv Item/Armor_Description.xml $ITEM_DIR/
@@ -33,9 +33,9 @@ jobs:
           mv Item/Magic_Explanation.xml $ITEM_DIR/
           mv Item/Magic_Name.xml $ITEM_DIR/
           mv Item/NPC_Name.xml $ITEM_DIR/
-          mv Item/One's_Vast_Knowledge_of_Magic.xml $ITEM_DIR/
-          mv Item/One's_Vast_Stock_of_Knowledge_About_Armor.xml $ITEM_DIR/
-          mv Item/One's_Vast_Stock_of_Knowledge_About_Weapons.xml $ITEM_DIR/
+          mv "Item/One's_Vast_Knowledge_of_Magic.xml" "$ITEM_DIR/"
+          mv "Item/One's_Vast_Stock_of_Knowledge_About_Armor.xml" "$ITEM_DIR/"
+          mv "Item/One's_Vast_Stock_of_Knowledge_About_Weapons.xml" "$ITEM_DIR/"
           mv Item/Place_Name.xml $ITEM_DIR/
           mv Item/Weapon_Name.xml $ITEM_DIR/
           mv Item/Weapons_Description.xml $ITEM_DIR/
@@ -56,7 +56,7 @@ jobs:
           mv Menu/Movie_Subtitles.xml $MENU_DIR/
           mv Menu/Name_of_a_Magical_Being.xml $MENU_DIR/
           mv Menu/One_Line_Help.xml $MENU_DIR/
-          mv Menu/One's_Vast_Stock_of_Knowledge_About_Magic_and_Stone.xml $MENU_DIR/
+          mv "Menu/One's_Vast_Stock_of_Knowledge_About_Magic_and_Stone.xml" "$MENU_DIR/"
           mv Menu/SP_Dialog.xml $MENU_DIR/
           mv Menu/SP_Key_Guide.xml $MENU_DIR/
           mv Menu/SP_Menu_Text.xml $MENU_DIR/
