@@ -420,7 +420,7 @@ jobs:
           rm -f rename-mapping-menu.txt
 
       - name: Сache files
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             path/to/item-msgbnd
