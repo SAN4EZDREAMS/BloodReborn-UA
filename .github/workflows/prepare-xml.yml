@@ -423,11 +423,14 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            item-msgbnd/**
-            menu-msgbnd/**
-          key: Ubuntu-item-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
+            ${{ github.workspace }}/item-msgbnd/
+            ${{ github.workspace }}/menu-msgbnd/
+          key:  |
+            item-msgbnd-${{ hashFiles('item-msgbnd/**/*') }}
+            menu-msgbnd-${{ hashFiles('menu-msgbnd/**/*') }}
           restore-keys: |
-            Ubuntu-item-msgbnd-
+            item-msgbnd-
+            menu-msgbnd-
 
 # Not needed now.
 
