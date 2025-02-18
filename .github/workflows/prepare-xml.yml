@@ -426,4 +426,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: processed-xml-files
-          path: item-msgbnd
+          path: |
+            item-msgbnd/**
+            menu-msgbnd/**
