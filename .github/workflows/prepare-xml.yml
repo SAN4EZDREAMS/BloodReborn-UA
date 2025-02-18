@@ -1,6 +1,7 @@
 name: Process XML Files
 
-on: [push, pull_request]
+on:
+  workflow_call:
 
 jobs:
   process-xml:
@@ -20,8 +21,6 @@ jobs:
           MENU_DIR="menu-msgbnd/msg/rusRU/64bit"
           mkdir -p $ITEM_DIR
           mkdir -p $MENU_DIR
-          echo "$ITEM_DIR"
-          echo "$MENU_DIR"
           mv Item/Accessory_Description.xml $ITEM_DIR/
           mv Item/Accessory_Name.xml $ITEM_DIR/
           mv Item/Accessory_Stock.xml $ITEM_DIR/
@@ -63,8 +62,6 @@ jobs:
           mv Menu/SP_One_Line_Help.xml $MENU_DIR/
           mv Menu/SP_System_Message_win64.xml $MENU_DIR/
           mv Menu/System_Message_win64.xml $MENU_DIR/
-          echo "Listing files in the project directory:"
-          ls -R  # Виведе всі файли та папки рекурсивно
 
       - name: Create _yabber-bnd4.xml file for Item
         run: |

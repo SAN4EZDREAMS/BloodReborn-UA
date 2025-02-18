@@ -1,0 +1,39 @@
+name: Build Project
+
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  pull_request_target:
+    types: [closed]
+
+jobs:
+  block-reference-eng:
+    uses: ./.github/workflows/block-reference-eng.yml
+
+  process-xml:
+    needs: block-reference-eng
+    uses: ./.github/workflows/prepare-xml.yml
+
+  compile-xml:
+    needs: process-xml
+    uses: ./.github/workflows/compile-xml.yml
+
+  upload-artifact:
+    needs: compile-xml  # Виконується після compile-xml
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: processed-xml-files
+          path: |
+            item-msgbnd/** 
+            menu-msgbnd/**
+
+# Поки що це item-msgbnd/** та menu-msgbnd/** Щоб контролювати якість дургої обробки, якщо все буде ідеально
+# Далі тут будуть item.msgbnd.dcx та menu.msgbnd.dcx
