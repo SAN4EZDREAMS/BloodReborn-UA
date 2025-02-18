@@ -20,7 +20,9 @@ jobs:
           MENU_DIR="menu-msgbnd/msg/rusRU/64bit"
           mkdir -p $ITEM_DIR
           mkdir -p $MENU_DIR
-          mv Item/Accessory_Description.xml $ITEM_DIR/
+          echo "$ITEM_DIR"
+          echo "$MENU_DIR"
+          mv "Item/Accessory_Description.xml" "$ITEM_DIR/"
           mv Item/Accessory_Name.xml $ITEM_DIR/
           mv Item/Accessory_Stock.xml $ITEM_DIR/
           mv Item/Armor_Description.xml $ITEM_DIR/
