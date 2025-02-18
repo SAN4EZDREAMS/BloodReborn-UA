@@ -15,11 +15,11 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            path/to/item-msgbnd
-            path/to/menu-msgbnd
-          key: Windows-item-msgbnd-${{ hashFiles('path/to/item-msgbnd/**/*') }}  # Використовуємо hashFiles для уникнення проблем із ключами
+            item-msgbnd/**
+            menu-msgbnd/**
+          key: Ubuntu-item-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
           restore-keys: |
-            Windows-item-msgbnd-
+            Ubuntu-item-msgbnd-
 
       - name: Використовування файлів
         run: |

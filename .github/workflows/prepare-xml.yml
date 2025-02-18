@@ -419,20 +419,15 @@ jobs:
           rm -f rename-mapping-item.txt
           rm -f rename-mapping-menu.txt
 
-      - name: Chache restore
+      - name: Cache restore
         uses: actions/cache@v3
         with:
           path: |
             item-msgbnd/**
             menu-msgbnd/**
-          key: Ubuntu-item-msgbnd-${{ hashFiles('path/to/item-msgbnd/**/*') }}
+          key: Ubuntu-item-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
           restore-keys: |
             Ubuntu-item-msgbnd-
-
-      - name: Check files
-        run: |
-            ls item-msgbnd/msg/rusRU/64bit
-            ls menu-msgbnd/msg/rusRU/64bit
 
 # Not needed now.
 
