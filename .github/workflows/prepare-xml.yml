@@ -423,16 +423,16 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            path/to/item-msgbnd
-            path/to/menu-msgbnd
+            item-msgbnd/**
+            menu-msgbnd/**
           key: Ubuntu-item-msgbnd-${{ hashFiles('path/to/item-msgbnd/**/*') }}
           restore-keys: |
             Ubuntu-item-msgbnd-
 
       - name: Check files
         run: |
-            ls path/to/item-msgbnd
             ls item-msgbnd/msg/rusRU/64bit
+            ls menu-msgbnd/msg/rusRU/64bit
 
 # Not needed now.
 
