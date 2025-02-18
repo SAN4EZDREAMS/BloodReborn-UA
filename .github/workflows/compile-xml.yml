@@ -17,12 +17,9 @@ jobs:
           path: |
             ${{ github.workspace }}/item-msgbnd/
             ${{ github.workspace }}/menu-msgbnd/
-          key:  |
-            item-msgbnd-${{ hashFiles('item-msgbnd/**/*') }}
-            menu-msgbnd-${{ hashFiles('menu-msgbnd/**/*') }}
+          key: item-menu-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
           restore-keys: |
-            item-msgbnd-
-            menu-msgbnd-  
+            item-menu-msgbnd-
 
       - name: Використовування файлів
         run: |

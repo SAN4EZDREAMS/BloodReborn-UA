@@ -419,18 +419,15 @@ jobs:
           rm -f rename-mapping-item.txt
           rm -f rename-mapping-menu.txt
 
-      - name: Cache restore
+      - name: Cache store
         uses: actions/cache@v3
         with:
           path: |
             ${{ github.workspace }}/item-msgbnd/
             ${{ github.workspace }}/menu-msgbnd/
-          key:  |
-            item-msgbnd-${{ hashFiles('item-msgbnd/**/*') }}
-            menu-msgbnd-${{ hashFiles('menu-msgbnd/**/*') }}
+          key: item-menu-msgbnd-${{ hashFiles('item-msgbnd/**/*', 'menu-msgbnd/**/*') }}
           restore-keys: |
-            item-msgbnd-
-            menu-msgbnd-
+            item-menu-msgbnd-
 
 # Not needed now.
 
