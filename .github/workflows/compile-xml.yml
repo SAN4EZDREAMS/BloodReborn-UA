@@ -23,9 +23,10 @@ jobs:
           dir ./downloaded_files/item-msgbnd
           dir ./downloaded_files/menu-msgbnd
 
-      - name: Show current working directory
-        run: |
-          Write-Host "Current directory: $(pwd)"
+      - name: Delete artifact after use
+        uses: jlumbroso/delete-artifact@v2
+        with:
+          name: processed-xml-files
 
       - name: List all files in repository
         run: |
