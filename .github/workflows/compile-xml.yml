@@ -11,13 +11,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: List directory structure
+      - name: Show current working directory
+        run: |
+          Write-Host "Current directory: $(pwd)"
+
+      - name: List all files in repository
         run: |
           Get-ChildItem -Recurse | Select-Object FullName
 
-      - name: Check if directory exists
+      - name: Check if directory exists using PowerShell
         run: |
-          if (Test-Path "item-msgbnd\msg\rusRU\64bit") {
+          $path = "item-msgbnd\msg\rusRU\64bit"
+          if (Test-Path $path) {
             Write-Host "Directory exists"
           } else {
             Write-Host "Directory does not exist"
