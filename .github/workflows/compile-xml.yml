@@ -11,6 +11,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Chache restore
+        uses: actions/cache@v2
+        with:
+          path: |
+            path/to/item-msgbnd
+            path/to/menu-msgbnd
+          key: ${{ runner.os }}-item-msgbnd-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-item-msgbnd-
+
       - name: Show current working directory
         run: |
           Write-Host "Current directory: $(pwd)"

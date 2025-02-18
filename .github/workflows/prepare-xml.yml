@@ -419,6 +419,16 @@ jobs:
           rm -f rename-mapping-item.txt
           rm -f rename-mapping-menu.txt
 
+      - name: Сache files
+        uses: actions/cache@v2
+        with:
+          path: |
+            path/to/item-msgbnd
+            path/to/menu-msgbnd
+          key: ${{ runner.os }}-item-msgbnd-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-item-msgbnd-
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
