@@ -429,6 +429,11 @@ jobs:
           restore-keys: |
             Ubuntu-item-msgbnd-
 
+      - name: Check files
+        run: |
+            ls path/to/item-msgbnd/**
+            ls path/to/menu-msgbnd/**
+
 # Not needed now.
 
  #     - name: Upload artifact
