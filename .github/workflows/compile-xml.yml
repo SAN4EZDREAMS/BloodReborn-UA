@@ -64,16 +64,40 @@ jobs:
             }
           }
 
+      - name: Remove XML files after conversion
+        run: |
+          $paths = @("downloaded_files/item-msgbnd/msg/rusRU/64bit", "downloaded_files/menu-msgbnd/msg/rusRU/64bit")
+          foreach ($path in $paths) {
+            if (Test-Path $path) {
+              Remove-Item -Path "$path/*.xml" -Force
+            } else {
+              Write-Host "Directory $path does not exist, skipping..."
+            }
+          }
+
       - name: List all files in repository
         run: |
           Get-ChildItem -Recurse | Select-Object FullName
 
-      - name: Remove XML files after conversion
-        working-directory: downloaded_files\item-msgbnd\msg\rusRU\64bit
+  upload-artifact:
+    needs: convert
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: List all files in repository for upload
         run: |
-          Remove-Item -Path "*.xml" -Force
+          Get-ChildItem -Recurse | Select-Object FullName
 
-
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: processed-xml-files
+          path: |
+            downloaded_files\item-msgbnd\** 
+            downloaded_files\menu-msgbnd\**
 
 #      - name: Upload FMG files as artifact
 #        uses: actions/upload-artifact@v4
