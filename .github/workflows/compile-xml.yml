@@ -39,8 +39,8 @@ jobs:
 
       - name: Download Yabber
         run: |
-          Invoke-WebRequest -Uri "https://github.com/JKAnderson/Yabber/releases/download/1.3.1/Yabber.1.3.1.zip" -OutFile "Yabber.1.3.1.zip"
-          Expand-Archive -Path "Yabber.1.3.1.zip" -DestinationPath "Yabber"
+          Invoke-WebRequest -Uri "https://github.com/JKAnderson/Yabber/releases/download/1.3.1/Yabber.1.3.1.zip" -OutFile "downloaded_files/Yabber.1.3.1.zip"
+          Expand-Archive -Path "downloaded_files/Yabber.1.3.1.zip" -DestinationPath "downloaded_files/Yabber"
 
       - name: List all files in repository
         run: |
@@ -48,7 +48,7 @@ jobs:
 
       - name: Convert XML to FMG
         run: |
-          $workDir = "${{ github.workspace }}\item-msgbnd\msg\rusRU\64bit"
+          $workDir = "${{ github.workspace }}\downloaded_files\item-msgbnd\msg\rusRU\64bit"
           if (-Not (Test-Path $workDir)) {
             Write-Host "Directory does not exist!"
             exit 1
@@ -57,7 +57,7 @@ jobs:
           $xmlFiles = Get-ChildItem -Filter "*.xml"
           foreach ($file in $xmlFiles) {
             Write-Host "Converting: $($file.FullName)"
-            Start-Process -FilePath "${{ github.workspace }}/Yabber/Yabber.exe" -ArgumentList "`"$($file.FullName)`"" -NoNewWindow -Wait
+            Start-Process -FilePath "${{ github.workspace }}\downloaded_files\Yabber\Yabber.exe" -ArgumentList "`"$($file.FullName)`"" -NoNewWindow -Wait
           }
 
       - name: Remove XML files after conversion
