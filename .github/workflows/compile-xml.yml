@@ -103,6 +103,10 @@ jobs:
           Move-Item -Path "downloaded_files\item.msgbnd.dcx" -Destination "$env:GITHUB_WORKSPACE"
           Move-Item -Path "downloaded_files\menu.msgbnd.dcx" -Destination "$env:GITHUB_WORKSPACE"
 
+      - name: Trash cleaning
+        run: |
+          Remove-Item -Path "downloaded_files" -Recurse -Force
+
       - name: List all files in repository
         run: |
           Get-ChildItem -Recurse | Select-Object FullName
@@ -112,8 +116,8 @@ jobs:
         with:
           name: processed-xml-files
           path: |
-            downloaded_files/item-msgbnd/** 
-            downloaded_files/menu-msgbnd/**
+            item.msgbnd.dcx 
+            menu.msgbnd.dcx
 
 #      - name: Upload FMG files as artifact
 #        uses: actions/upload-artifact@v4
