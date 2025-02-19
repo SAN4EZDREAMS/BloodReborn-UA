@@ -1,0 +1,24 @@
+name: Validation of Mandatory XML IDs
+
+on:
+  workflow_call:
+
+jobs:
+  list-xml-ids:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Extract and display XML IDs
+        run: |
+          while IFS= read -r file; do
+            echo "File: $file"
+            ids=$(grep -oE '<text id="[0-9]+"' "$file" | sed -E 's/<text id="([0-9]+)"/\1/')
+            if [ -n "$ids" ]; then
+              echo "$ids" | sort -n | uniq | paste -sd ", " -
+            else
+              echo "No IDs found."
+            fi
+            echo "---------------------"
+          done < <(find . -type f -name "*.xml")

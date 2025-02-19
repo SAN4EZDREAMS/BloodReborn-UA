@@ -15,6 +15,10 @@ jobs:
     needs: clang-format
     uses: ./.github/workflows/reuse.yml
 
+  miss-strings:
+    needs: clang-format
+    uses: ./.github/workflows/miss-strings.yml
+
   checking-xml:
     uses: ./.github/workflows/remove-references-eng.yml
 
