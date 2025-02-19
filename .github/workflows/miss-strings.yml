@@ -14,9 +14,10 @@ jobs:
         run: |
           while IFS= read -r file; do
             echo "File: $file"
-            ids=$(grep -oE '<text id="[0-9]+"' "$file" | sed -E 's/<text id="([0-9]+)"/\1/')
+            ids=$(grep -oE '<text id="[0-9]+"' "$file" | sed -E 's/<text id="([0-9]+)"/\1/' | sort -n | uniq | tr '\n' ',')
+            ids=${ids%,}
             if [ -n "$ids" ]; then
-              echo "$ids" | sort -n | uniq | paste -sd ", " -
+              echo "$ids"
             else
               echo "No IDs found."
             fi
