@@ -12,12 +12,14 @@ jobs:
       
       - name: Scan XML files for duplicate IDs
         run: |
-          ids=$(grep -ohr '<text id="[0-9]\+"' --include "*.xml" . | sed -E 's/<text id="([0-9]+)"/\1/' | sort)
+          ids=$(grep -ohr '<text id="[0-9]\+"' --include "*.xml" . | sed -E 's/<text id="([0-9]+)"/\1/' | sort -n)
           duplicates=$(echo "$ids" | uniq -d)
-          
+
           if [ -n "$duplicates" ]; then
             echo "Error: Duplicate IDs found in XML files!"
-            grep -rn '<text id="'"$duplicates"'"' --include "*.xml"
+            for id in $duplicates; do
+              grep -rn --include="*.xml" "<text id=\"$id\"" .
+            done
             exit 1
           else
             echo "All XML IDs are unique."
