@@ -5,7 +5,7 @@ on:
 
 jobs:
   xml-lint:
-    name: Check XML Files
+    name: read files
     runs-on: ubuntu-latest
 
     steps:
