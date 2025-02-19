@@ -1,7 +1,7 @@
 name: Check Unique XML IDs
 
 on:
-    workflow_call:
+  workflow_call:
 
 jobs:
   check-xml-ids:
@@ -10,17 +10,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
-      - name: Scan XML files for duplicate IDs
+      - name: Scan XML files for duplicate IDs within each file
         run: |
-          ids=$(grep -ohr '<text id="[0-9]\+"' --include "*.xml" . | sed -E 's/<text id="([0-9]+)"/\1/' | sort -n)
-          duplicates=$(echo "$ids" | uniq -d)
+          error_found=0
+          
+          find . -type f -name "*.xml" | while read -r file; do
+            # Витягуємо лише ID із файлу
+            ids=$(grep -oE '<text id="[0-9]+"' "$file" | sed -E 's/<text id="([0-9]+)"/\1/')
+            
+            duplicates=$(echo "$ids" | sort -n | uniq -d)
 
-          if [ -n "$duplicates" ]; then
-            echo "Error: Duplicate IDs found in XML files!"
-            for id in $duplicates; do
-              grep -rn --include="*.xml" "<text id=\"$id\"" .
-            done
+            if [ -n "$duplicates" ]; then
+              echo "Error: Duplicate IDs found in file: $file"
+              for id in $duplicates; do
+                grep -n "<text id=\"$id\"" "$file"
+              done
+              error_found=1
+            fi
+          done
+          
+          if [ "$error_found" -eq 1 ]; then
             exit 1
           else
-            echo "All XML IDs are unique."
+            echo "All XML files have unique IDs within themselves."
           fi
