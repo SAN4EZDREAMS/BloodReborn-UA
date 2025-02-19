@@ -100,8 +100,8 @@ jobs:
 
       - name: Move files to root directory
         run: |
-          Move-Item -Path "downloaded_files\item.msgbnd.dcx" -Destination "$(Build.SourcesDirectory)"
-          Move-Item -Path "downloaded_files\menu.msgbnd.dcx" -Destination "$(Build.SourcesDirectory)"
+          Move-Item -Path "downloaded_files\item.msgbnd.dcx" -Destination "$env:GITHUB_WORKSPACE"
+          Move-Item -Path "downloaded_files\menu.msgbnd.dcx" -Destination "$env:GITHUB_WORKSPACE"
 
       - name: List all files in repository
         run: |
