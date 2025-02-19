@@ -8,11 +8,11 @@ on:
     types: [closed]
 
 jobs:
-  сhecking-files:
+  checking-xml:
     uses: ./.github/workflows/remove-references-eng.yml
 
   preparation-xml:
-    needs: сhecking-files
+    needs: checking-xml
     uses: ./.github/workflows/preparation-xml.yml
 
   convert-xml:
