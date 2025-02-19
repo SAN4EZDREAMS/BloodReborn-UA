@@ -8,11 +8,11 @@ on:
     types: [closed]
 
 jobs:
-  remove_files:
-    uses: ./.github/workflows/block-reference-eng.yml
+  сhecking-files:
+    uses: ./.github/workflows/remove-references-eng.yml
 
   preparation-xml:
-    needs: remove_files
+    needs: сhecking-files
     uses: ./.github/workflows/preparation-xml.yml
 
   convert-xml:
