@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 jobs:
-  convert:
+  compilation:
     runs-on: windows-latest
 
     steps:
@@ -98,32 +98,16 @@ jobs:
           & $YabberDCXPath "downloaded_files\item.msgbnd"
           & $YabberDCXPath "downloaded_files\menu.msgbnd"
 
-      - name: Move files to root directory
+      - name: Trash cleaning
         run: |
           Move-Item -Path "downloaded_files\item.msgbnd.dcx" -Destination "$env:GITHUB_WORKSPACE"
           Move-Item -Path "downloaded_files\menu.msgbnd.dcx" -Destination "$env:GITHUB_WORKSPACE"
-
-      - name: Trash cleaning
-        run: |
           Remove-Item -Path "downloaded_files" -Recurse -Force
-
-      - name: List all files in repository
-        run: |
-          Get-ChildItem -Recurse | Select-Object FullName
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: processed-xml-files
+          name: BloodReborn-UA
           path: |
             item.msgbnd.dcx 
             menu.msgbnd.dcx
-
-#      - name: Upload FMG files as artifact
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: converted-fmg
-#          path: "item-msgbnd/msg/rusRU/64bit/*.fmg"
-
-# Поки що це item-msgbnd/** та menu-msgbnd/** Щоб контролювати якість дургої обробки, якщо все буде ідеально
-# Далі тут будуть item.msgbnd.dcx та menu.msgbnd.dcx

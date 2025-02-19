@@ -11,10 +11,10 @@ jobs:
   remove_files:
     uses: ./.github/workflows/block-reference-eng.yml
 
-  process-xml:
+  preparation-xml:
     needs: remove_files
-    uses: ./.github/workflows/prepare-xml.yml
+    uses: ./.github/workflows/preparation-xml.yml
 
-  compile-xml:
-    needs: process-xml
-    uses: ./.github/workflows/compile-xml.yml
+  convert-xml:
+    needs: preparation-xml
+    uses: ./.github/workflows/convert-xml.yml
