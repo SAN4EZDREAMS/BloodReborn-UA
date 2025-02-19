@@ -1,0 +1,27 @@
+name: XML Lint Check
+
+on:
+    workflow_call:
+
+jobs:
+  xml-lint:
+    name: Check XML Files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Find and validate XML files
+        run: |
+          find . -name "*.xml" | while read -r file; do
+            echo "Checking $file..."
+            xmllint --noout "$file"
+            if [ $? -ne 0 ]; then
+              echo "::error file=$file::Syntax error in $file"
+              exit 1
+            fi
+          done
+
+      - name: Success message
+        run: echo "All XML files are valid!"

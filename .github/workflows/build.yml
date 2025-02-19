@@ -8,6 +8,9 @@ on:
     types: [closed]
 
 jobs:
+  clang-format:
+    uses: ./.github/workflows/clang-format.yml
+
   checking-xml:
     uses: ./.github/workflows/remove-references-eng.yml
 
