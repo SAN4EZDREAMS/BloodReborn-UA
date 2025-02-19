@@ -75,19 +75,18 @@ jobs:
             }
           }
 
-      - name: List all files in repository
+      - name: Create and write additional XML files
         run: |
-          Get-ChildItem -Recurse | Select-Object FullName
+          $xmlContent = @"
+          <?xml version="1.0" encoding="utf-8"?>
+          <dcx>
+            <compression>DarkSouls3</compression>
+          </dcx>
+          "@
+          Set-Content -Path "downloaded_files/item.msgbnd-yabber-dcx.xml" -Value $xmlContent -Encoding UTF8
+          Set-Content -Path "downloaded_files/menu.msgbnd-yabber-dcx.xml" -Value $xmlContent -Encoding UTF8
 
-  upload-artifact:
-    needs: convert
-    runs-on: windows-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: List all files in repository for upload
+      - name: List all files in repository
         run: |
           Get-ChildItem -Recurse | Select-Object FullName
 
@@ -96,8 +95,8 @@ jobs:
         with:
           name: processed-xml-files
           path: |
-            downloaded_files\item-msgbnd\** 
-            downloaded_files\menu-msgbnd\**
+            downloaded_files/item-msgbnd/** 
+            downloaded_files/menu-msgbnd/**
 
 #      - name: Upload FMG files as artifact
 #        uses: actions/upload-artifact@v4
@@ -105,3 +104,5 @@ jobs:
 #          name: converted-fmg
 #          path: "item-msgbnd/msg/rusRU/64bit/*.fmg"
 
+# Поки що це item-msgbnd/** та menu-msgbnd/** Щоб контролювати якість дургої обробки, якщо все буде ідеально
+# Далі тут будуть item.msgbnd.dcx та menu.msgbnd.dcx

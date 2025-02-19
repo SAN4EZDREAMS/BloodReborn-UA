@@ -18,6 +18,3 @@ jobs:
   compile-xml:
     needs: process-xml
     uses: ./.github/workflows/compile-xml.yml
-
-# Поки що це item-msgbnd/** та menu-msgbnd/** Щоб контролювати якість дургої обробки, якщо все буде ідеально
-# Далі тут будуть item.msgbnd.dcx та menu.msgbnd.dcx
