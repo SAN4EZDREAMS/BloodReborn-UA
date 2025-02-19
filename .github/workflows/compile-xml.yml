@@ -97,7 +97,12 @@ jobs:
           $YabberDCXPath = "downloaded_files\Yabber\Yabber 1.3.1\Yabber.DCX.exe"
           & $YabberDCXPath "downloaded_files\item.msgbnd"
           & $YabberDCXPath "downloaded_files\menu.msgbnd"
-          
+
+      - name: Move files to root directory
+        run: |
+          Move-Item -Path "downloaded_files\item.msgbnd.dcx" -Destination "$(Build.SourcesDirectory)"
+          Move-Item -Path "downloaded_files\menu.msgbnd.dcx" -Destination "$(Build.SourcesDirectory)"
+
       - name: List all files in repository
         run: |
           Get-ChildItem -Recurse | Select-Object FullName
