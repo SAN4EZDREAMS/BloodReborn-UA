@@ -12,10 +12,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2
+
       - name: Find and validate XML files
         run: |
           find . -name "*.xml" | while read -r file; do
             echo "Checking $file..."
+            
             xmllint --noout "$file"
             if [ $? -ne 0 ]; then
               echo "::error file=$file::Syntax error in $file"
