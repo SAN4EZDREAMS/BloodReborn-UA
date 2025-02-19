@@ -1,0 +1,22 @@
+name: Check Unique XML IDs
+
+on:
+    workflow_call:
+
+jobs:
+  check-xml-ids:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Scan XML files for duplicate IDs
+        run: |
+          duplicates=$(grep -ohr '<text id="[0-9]\+"' --include "*.xml" . | sort | uniq -d)
+          if [ -n "$duplicates" ]; then
+            echo "Error: Duplicate IDs found in XML files!"
+            echo "$duplicates"
+            exit 1
+          else
+            echo "All XML IDs are unique."
+          fi

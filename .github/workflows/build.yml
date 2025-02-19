@@ -11,6 +11,10 @@ jobs:
   clang-format:
     uses: ./.github/workflows/clang-format.yml
 
+  reuse:
+    needs: clang-format
+    uses: ./.github/workflows/reuse.yml
+
   checking-xml:
     uses: ./.github/workflows/remove-references-eng.yml
 
