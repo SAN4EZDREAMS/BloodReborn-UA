@@ -48,7 +48,7 @@ jobs:
 
       - name: Convert XML to FMG
         run: |
-          $workDir = "${{ github.workspace }}/item-msgbnd/msg/rusRU/64bit"
+          $workDir = "${{ github.workspace }}\item-msgbnd\msg\rusRU\64bit"
           if (-Not (Test-Path $workDir)) {
             Write-Host "Directory does not exist!"
             exit 1
