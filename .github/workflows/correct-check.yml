@@ -15,18 +15,16 @@ jobs:
           error_found=false
           while IFS= read -r file; do
             echo "Checking file: $file"
-            while IFS= read -r line; do
-              if [[ $line =~ <text\ id=\"([^\"]+)\" ]]; then
-                id="${BASH_REMATCH[1]}"
-                if ! [[ "$id" =~ ^[0-9]+$ ]]; then
-                  echo "ERROR: Non-numeric ID '$id' found in file '$file'"
-                  error_found=true
-                fi
+            while IFS= read -r id; do
+              if ! [[ "$id" =~ ^[0-9]+$ ]]; then
+                echo "ERROR: Non-numeric ID '$id' found in file '$file'"
+                error_found=true
               fi
-            done < "$file"
+            done < <(grep -oP '<text id="\K[^"]+' "$file")
             echo "---------------------"
           done < <(find . -type f -name "*.xml")
 
           if [ "$error_found" = true ]; then
             exit 1
           fi
+
