@@ -57,30 +57,33 @@ jobs:
           file_id_map["./Menu/SP_Key_Guide.xml"]="1000,1001,100000,100001,100002,100003,100004,100005,100006,100007,100008,100009,100010,100011,100012,100013,100014,110000,110001,110002,120000,120001,120002,120003,120004,120005,120006,120007,120008,120009,120010,120011,120012,130000,130001,130002,130003,130004,130005,130006,130007,140000,140001,140002,150000,150001,150002,150003,150004,150005,150006,150007,150008,150009,150010,150011,150012,150013,150014,150015,150016,160000,160001,200000,200001,200002,200003,200004,200005,200006,310000,320000,320001,400000,400001,400002,400003,400004,400005,400006,400007,407000,407001"
         
           for file in "${!file_id_map[@]}"; do
-            if [ ! -f "$file" ]; then
-              echo "Warning: $file not found!"
-              continue
-            fi
-        
-            echo "Checking $file..."
-        
-            found_ids=$(awk -F '"' '/<text id=/ {print $2}' "$file" | sort -n | uniq | paste -sd "," -)
-        
-            IFS=',' read -ra required_ids <<< "${file_id_map[$file]}"
-            missing_ids=""
-        
-            for id in "${required_ids[@]}"; do
-              if ! echo ",$found_ids," | grep -q ",$id,"; then
-                missing_ids+="$id,"
+              if [ ! -f "$file" ]; then
+                  echo "Warning: $file not found!"
+                  continue
               fi
-            done
-        
-            missing_ids=${missing_ids%,}
-        
-            if [ -n "$missing_ids" ]; then
-              echo "Error: Missing IDs in $file: $missing_ids"
-              exit 1
-            else
-              echo "All required IDs are present in $file."
-            fi
+
+              echo "Checking $file..."
+
+              required_ids="${file_id_map[$file]}"
+
+              missing_ids=$(awk -v required="$required_ids" '
+              BEGIN {
+                  split(required, required_arr, ",")
+                  for (i in required_arr) missing[required_arr[i]] = 1
+              }
+              match($0, /<text id="([0-9]+)"/, id) {
+                  delete missing[id[1]]
+              }
+              END {
+                  for (m in missing) printf "%s,", m
+              }' "$file")
+
+              missing_ids=${missing_ids%,}
+
+              if [ -n "$missing_ids" ]; then
+                  echo "Error: Missing IDs in $file: $missing_ids"
+                  exit 1
+              else
+                  echo "All required IDs are present in $file."
+              fi
           done
