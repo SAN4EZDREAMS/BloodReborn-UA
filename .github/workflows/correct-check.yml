@@ -1,10 +1,12 @@
+# SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved.
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
 name: Checking the correctness of IDs
 
 on:
   workflow_call:
 
 jobs:
-  list-xml-ids:
+  check-xml-ids:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

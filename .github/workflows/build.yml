@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved.
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
 name: Build Project
 
 on:
@@ -11,7 +13,7 @@ jobs:
   clang-format:
     uses: ./.github/workflows/clang-format.yml
 
-  reuse:
+  reuse-check:
     needs: clang-format
     uses: ./.github/workflows/reuse.yml
 
