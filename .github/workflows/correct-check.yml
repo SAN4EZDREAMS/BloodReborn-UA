@@ -17,7 +17,7 @@ jobs:
             echo "Checking file: $file"
             while IFS= read -r id; do
               if ! [[ "$id" =~ ^[0-9]+$ ]]; then
-                echo "ERROR: Non-numeric ID '$id' found in file '$file'"
+                echo "❌ ERROR: Non-numeric ID '$id' found in file '$file'"
                 error_found=true
               fi
             done < <(grep -oP '<text id="\K[^"]+' "$file")
