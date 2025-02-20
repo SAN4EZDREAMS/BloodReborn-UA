@@ -49,6 +49,8 @@ jobs:
           file_id_map["./Menu/List_of_Tags_for_Text_Display.xml"]="100014,100015,100016,100017,100018,100019,100023,100024,100025,100026,100027,100028,100029,100033,100034,100035,100036,100037,100038,100039,100042,100043,100044,100045,100046,100047,100048,100049,100052,100053,100054,100055,100056,100057,100058,100059,100062,100063,100064,100065,100066,100067,100068,100069,100072,100073,100074,100075,100076,100077,100078,100079"
           file_id_map["./Menu/SP_Key_Guide.xml"]="100006,150001,200004,407000"
           
+          errors_found=false
+
           for file in "${!file_id_map[@]}"; do
               if [ ! -f "$file" ]; then
                   echo "Warning: $file not found!"
@@ -69,9 +71,14 @@ jobs:
 
                   if [ -n "$missing_or_invalid" ]; then
                       echo "❌ $missing_or_invalid"
-                      exit 1
+                      errors_found=true
                   fi
               done
-
-              echo "✅ All required IDs are correctly set to %null% in $file."
           done
+
+          if [ "$errors_found" = true ]; then
+              echo "❌ Errors found in the files. Please fix the issues above."
+              exit 1
+          else
+              echo "✅ All required IDs are correctly set to %null% in all files."
+          fi
