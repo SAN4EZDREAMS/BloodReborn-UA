@@ -19,6 +19,10 @@ jobs:
     needs: clang-format
     uses: ./.github/workflows/miss-strings.yml
 
+  nulls-check:
+    needs: clang-format
+    uses: ./.github/workflows/nulls-check.yml
+
   checking-xml:
     uses: ./.github/workflows/remove-references-eng.yml
 
