@@ -14,7 +14,11 @@ jobs:
         run: |
           while IFS= read -r file; do
             echo "File: $file"
-            ids=$(grep -oE '<text id="[0-9]+"[^>]*%null%[^<]*</text>' "$file" | sed -E 's/<text id="([0-9]+)".*/\1/' | sort -n | uniq | tr '\n' ',')
+            ids=$(grep -oP '<text id="\K[0-9]+' "$file" | while read id; do
+              if grep -q "<text id=\"$id\">%null%" "$file"; then
+                echo -n "$id,"
+              fi
+            done)
             ids=${ids%,}
             if [ -n "$ids" ]; then
               echo "$ids"
