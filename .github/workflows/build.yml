@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved.
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+name: Build Project
+
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  pull_request_target:
+    types: [closed]
+
+jobs:
+  clang-format:
+    uses: ./.github/workflows/clang-format.yml
+
+  reuse-check:
+    needs: clang-format
+    uses: ./.github/workflows/reuse.yml
+
+  miss-strings:
+    needs: clang-format
+    uses: ./.github/workflows/miss-strings.yml
+
+  nulls-check:
+    needs: clang-format
+    uses: ./.github/workflows/nulls-check.yml
+
+  correct-check:
+    needs: clang-format
+    uses: ./.github/workflows/correct-check.yml
+
+  checking-xml:
+    uses: ./.github/workflows/remove-references-eng.yml
+
+  preparation-xml:
+    needs: checking-xml
+    uses: ./.github/workflows/preparation-xml.yml
+
+  convert-xml:
+    needs: preparation-xml
+    uses: ./.github/workflows/convert-xml.yml

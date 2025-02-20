@@ -1,0 +1,115 @@
+# SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved.
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+name: Convert XML to DCX
+
+on:
+  workflow_call:
+
+jobs:
+  compilation:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download processed XML files
+        uses: actions/download-artifact@v4
+        with:
+          name: processed-xml-files
+          path: ./downloaded_files
+
+      - name: Compile XML files
+        run: |
+          echo "Processing files from ./downloaded_files"
+          dir ./downloaded_files/item-msgbnd
+          dir ./downloaded_files/menu-msgbnd
+
+      - name: Delete artifact after use
+        run: |
+          $artifacts = gh api repos/${{ github.repository }}/actions/artifacts | ConvertFrom-Json
+          $artifact = $artifacts.artifacts | Where-Object { $_.name -eq "processed-xml-files" }
+          if ($artifact) {
+            gh api --method DELETE repos/${{ github.repository }}/actions/artifacts/$($artifact.id)
+            Write-Host "Artifact deleted"
+          } else {
+            Write-Host "Artifact not found"
+          }
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download Yabber
+        run: |
+          Invoke-WebRequest -Uri "https://github.com/JKAnderson/Yabber/releases/download/1.3.1/Yabber.1.3.1.zip" -OutFile "downloaded_files/Yabber.1.3.1.zip"
+          Expand-Archive -Path "downloaded_files/Yabber.1.3.1.zip" -DestinationPath "downloaded_files/Yabber"
+
+      - name: Convert XML to FMG
+        run: |
+          $folders = @(
+          "${{ github.workspace }}\downloaded_files\item-msgbnd\msg\rusRU\64bit",
+          "${{ github.workspace }}\downloaded_files\menu-msgbnd\msg\rusRU\64bit"
+          )
+
+          foreach ($workDir in $folders) {
+            if (-Not (Test-Path $workDir)) {
+              Write-Host "Skipping: $workDir (Directory does not exist!)"
+              continue
+            }
+             
+            Set-Location -Path $workDir
+            $xmlFiles = Get-ChildItem -Filter "*.xml"
+
+            foreach ($file in $xmlFiles) {
+              Write-Host "Converting: $($file.FullName)"
+              Start-Process -FilePath "${{ github.workspace }}\downloaded_files\Yabber\Yabber 1.3.1\Yabber.exe" -ArgumentList "`"$($file.FullName)`"" -NoNewWindow -Wait
+            }
+          }
+
+      - name: Remove XML files after conversion
+        run: |
+          $paths = @("downloaded_files/item-msgbnd/msg/rusRU/64bit", "downloaded_files/menu-msgbnd/msg/rusRU/64bit")
+          foreach ($path in $paths) {
+            if (Test-Path $path) {
+              Remove-Item -Path "$path/*.xml" -Force
+            } else {
+              Write-Host "Directory $path does not exist, skipping..."
+            }
+          }
+
+      - name: Create and write additional XML files
+        run: |
+          $xmlContent = @"
+          <?xml version="1.0" encoding="utf-8"?>
+          <dcx>
+            <compression>DarkSouls3</compression>
+          </dcx>
+          "@
+          Set-Content -Path "downloaded_files/item.msgbnd-yabber-dcx.xml" -Value $xmlContent -Encoding UTF8
+          Set-Content -Path "downloaded_files/menu.msgbnd-yabber-dcx.xml" -Value $xmlContent -Encoding UTF8
+
+      - name: Preparing for final compilation
+        run: |
+          $YabberPath = "downloaded_files\Yabber\Yabber 1.3.1\Yabber.exe"
+          & $YabberPath "downloaded_files\item-msgbnd"
+          & $YabberPath "downloaded_files\menu-msgbnd"
+
+      - name: Final compilation to DCX 
+        run: |
+          $YabberDCXPath = "downloaded_files\Yabber\Yabber 1.3.1\Yabber.DCX.exe"
+          & $YabberDCXPath "downloaded_files\item.msgbnd"
+          & $YabberDCXPath "downloaded_files\menu.msgbnd"
+
+      - name: Trash cleaning
+        run: |
+          Move-Item -Path "downloaded_files\item.msgbnd.dcx" -Destination "$env:GITHUB_WORKSPACE"
+          Move-Item -Path "downloaded_files\menu.msgbnd.dcx" -Destination "$env:GITHUB_WORKSPACE"
+          Remove-Item -Path "downloaded_files" -Recurse -Force
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: BloodReborn-UA
+          path: |
+            item.msgbnd.dcx 
+            menu.msgbnd.dcx

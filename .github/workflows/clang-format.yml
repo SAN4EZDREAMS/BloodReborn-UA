@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved.
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+name: XML Lint Check
+
+on:
+    workflow_call:
+
+jobs:
+  xml-lint:
+    name: read files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Find and validate XML files
+        run: |
+          find . -name "*.xml" | while read -r file; do
+            echo "Checking $file..."
+            
+            xmllint --noout "$file"
+            if [ $? -ne 0 ]; then
+              echo "::error file=$file::❌ Syntax error in $file"
+              exit 1
+            fi
+          done
+
+      - name: Success message
+        run: echo "✅ All XML files are valid!"

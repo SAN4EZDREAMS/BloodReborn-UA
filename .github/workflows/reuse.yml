@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved.
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+name: Check Unique XML IDs
+
+on:
+  workflow_call:
+
+jobs:
+  check-xml-ids:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Scan XML files for duplicate IDs within each file
+        run: |
+          error_found=0
+
+          while IFS= read -r file; do
+            ids=$(grep -oE '<text id="[0-9]+"' "$file" | sed -E 's/<text id="([0-9]+)"/\1/')
+
+            duplicates=$(echo "$ids" | sort -n | uniq -d)
+
+            if [ -n "$duplicates" ]; then
+              echo "❌ Error: Duplicate IDs found in file: $file"
+              echo "$duplicates" | while read -r id; do
+                grep -n "<text id=\"$id\"" "$file"
+              done
+              error_found=1
+            fi
+          done < <(find . -type f -name "*.xml")
+
+          if [ "$error_found" -eq 1 ]; then
+            exit 1
+          else
+            echo "✅ All XML files have unique IDs within themselves."
+          fi
+
