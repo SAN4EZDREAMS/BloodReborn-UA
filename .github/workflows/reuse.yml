@@ -20,7 +20,7 @@ jobs:
             duplicates=$(echo "$ids" | sort -n | uniq -d)
 
             if [ -n "$duplicates" ]; then
-              echo "Error: Duplicate IDs found in file: $file"
+              echo "❌ Error: Duplicate IDs found in file: $file"
               echo "$duplicates" | while read -r id; do
                 grep -n "<text id=\"$id\"" "$file"
               done
@@ -31,6 +31,6 @@ jobs:
           if [ "$error_found" -eq 1 ]; then
             exit 1
           else
-            echo "All XML files have unique IDs within themselves."
+            echo "✅ All XML files have unique IDs within themselves."
           fi
 
