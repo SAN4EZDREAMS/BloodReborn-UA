@@ -1,0 +1,38 @@
+name: Checking the correctness of IDs
+
+on:
+  workflow_call:
+
+jobs:
+  list-xml-ids:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract and display XML IDs
+        run: |
+          error_found=false
+          while IFS= read -r file; do
+            echo "File: $file"
+            ids=$(grep -oP '<text id="\K[0-9]+' "$file" | while read id; do
+              if grep -q "<text id=\"$id\">%null%" "$file"; then
+                if ! [[ "$id" =~ ^[0-9]+$ ]]; then
+                  echo "ERROR: Non-numeric ID '$id' found in file '$file'."
+                  error_found=true
+                fi
+                echo -n "$id,"
+              fi
+            done)
+            ids=${ids%,}
+            if [ -n "$ids" ]; then
+              echo "$ids"
+            else
+              echo "No IDs found."
+            fi
+            echo "---------------------"
+          done < <(find . -type f -name "*.xml")
+          
+          if [ "$error_found" = true ]; then
+            exit 1
+          fi

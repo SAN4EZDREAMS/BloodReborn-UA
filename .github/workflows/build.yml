@@ -23,6 +23,10 @@ jobs:
     needs: clang-format
     uses: ./.github/workflows/nulls-check.yml
 
+  correct-check:
+    needs: clang-format
+    uses: ./.github/workflows/correct-check.yml
+
   checking-xml:
     uses: ./.github/workflows/remove-references-eng.yml
 
