@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved.
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+name: Checking the correctness of IDs
+
+on:
+  workflow_call:
+
+jobs:
+  check-xml-ids:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract and validate XML IDs
+        run: |
+          error_found=false
+          while IFS= read -r file; do
+            echo "Checking file: $file"
+            while IFS= read -r id; do
+              if ! [[ "$id" =~ ^[0-9]+$ ]]; then
+                echo "❌ ERROR: Non-numeric ID '$id' found in file '$file'"
+                error_found=true
+              fi
+            done < <(grep -oP '<text id="\K[^"]+' "$file")
+            echo "---------------------"
+          done < <(find . -type f -name "*.xml")
+
+          if [ "$error_found" = true ]; then
+            exit 1
+          fi
+

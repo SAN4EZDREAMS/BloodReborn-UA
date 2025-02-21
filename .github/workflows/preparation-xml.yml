@@ -1,0 +1,430 @@
+# SPDX-FileCopyrightText: Copyright © 2025 BloodReborn-UA. All rights reserved.
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+name: Process XML Files
+
+on:
+  workflow_call:
+
+jobs:
+  processing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Modify XML files
+        run: |
+          find . -name "*.xml" -exec sed -i 's|<version>BloodReborn-UA</version>|<version>DarkSouls3</version>|g' {} +
+
+      - name: Move XML files to correct directories
+        run: |
+          ITEM_DIR="item-msgbnd/msg/rusRU/64bit"
+          MENU_DIR="menu-msgbnd/msg/rusRU/64bit"
+          mkdir -p $ITEM_DIR
+          mkdir -p $MENU_DIR
+          mv Item/Accessory_Description.xml $ITEM_DIR/
+          mv Item/Accessory_Name.xml $ITEM_DIR/
+          mv Item/Accessory_Stock.xml $ITEM_DIR/
+          mv Item/Armor_Description.xml $ITEM_DIR/
+          mv Item/Armor_Name.xml $ITEM_DIR/
+          mv Item/Item_Description.xml $ITEM_DIR/
+          mv Item/Item_Name.xml $ITEM_DIR/
+          mv Item/Item_Necessities.xml $ITEM_DIR/
+          mv Item/Magic_Explanation.xml $ITEM_DIR/
+          mv Item/Magic_Name.xml $ITEM_DIR/
+          mv Item/NPC_Name.xml $ITEM_DIR/
+          mv "Item/One's_Vast_Knowledge_of_Magic.xml" "$ITEM_DIR/"
+          mv "Item/One's_Vast_Stock_of_Knowledge_About_Armor.xml" "$ITEM_DIR/"
+          mv "Item/One's_Vast_Stock_of_Knowledge_About_Weapons.xml" "$ITEM_DIR/"
+          mv Item/Place_Name.xml $ITEM_DIR/
+          mv Item/Weapon_Name.xml $ITEM_DIR/
+          mv Item/Weapons_Description.xml $ITEM_DIR/
+          mv Menu/Bloodstained_Lettering.xml $MENU_DIR/
+          mv Menu/Cause_of_Death.xml $MENU_DIR/
+          mv Menu/Conversation.xml $MENU_DIR/
+          mv Menu/Dialog.xml $MENU_DIR/
+          mv Menu/Event_Text.xml $MENU_DIR/
+          mv Menu/Ingame_Menu.xml $MENU_DIR/
+          mv Menu/Key_Guide.xml $MENU_DIR/
+          mv Menu/List_of_Tags_for_Text_Display.xml $MENU_DIR/
+          mv Menu/Magic_Stone_Explanation.xml $MENU_DIR/
+          mv Menu/Magic_Stone_Prefix.xml $MENU_DIR/
+          mv Menu/Magical_Stone_Effect.xml $MENU_DIR/
+          mv Menu/Menu_and_Others.xml $MENU_DIR/
+          mv Menu/Menu_Common_Text.xml $MENU_DIR/
+          mv Menu/Model_Tag_win64.xml $MENU_DIR/
+          mv Menu/Movie_Subtitles.xml $MENU_DIR/
+          mv Menu/Name_of_a_Magical_Being.xml $MENU_DIR/
+          mv Menu/One_Line_Help.xml $MENU_DIR/
+          mv "Menu/One's_Vast_Stock_of_Knowledge_About_Magic_and_Stone.xml" "$MENU_DIR/"
+          mv Menu/SP_Dialog.xml $MENU_DIR/
+          mv Menu/SP_Key_Guide.xml $MENU_DIR/
+          mv Menu/SP_Menu_Text.xml $MENU_DIR/
+          mv Menu/SP_One_Line_Help.xml $MENU_DIR/
+          mv Menu/SP_System_Message_win64.xml $MENU_DIR/
+          mv Menu/System_Message_win64.xml $MENU_DIR/
+
+      - name: Create _yabber-bnd4.xml file for Item
+        run: |
+            cat << EOF > item-msgbnd/_yabber-bnd4.xml
+            <?xml version="1.0" encoding="utf-8"?>
+            <bnd4>
+              <filename>item.msgbnd</filename>
+              <compression>None</compression>
+              <timestamp>07D7R6</timestamp>
+              <format>0x74</format>
+              <bigendian>False</bigendian>
+              <flag1>False</flag1>
+              <flag2>False</flag2>
+              <unicode>True</unicode>
+              <extended>0x00</extended>
+              <files>
+                <file>
+                  <flags>0x40</flags>
+                  <id>10</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\アイテム名.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>11</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\武器名.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>12</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\防具名.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>13</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\アクセサリ名.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>14</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\魔法名.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>18</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\NPC名.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>19</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\地名.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>20</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\アイテム説明.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>21</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\武器説明.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>22</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\防具説明.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>23</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\アクセサリ説明.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>24</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\アイテムうんちく.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>25</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\武器うんちく.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>26</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\防具うんちく.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>27</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\アクセサリうんちく.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>28</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\魔法説明.fmg</path>
+                </file>
+                <file>
+                  <flags>0x40</flags>
+                  <id>29</id>
+                  <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                  <path>msg\rusRU\64bit\魔法うんちく.fmg</path>
+                </file>
+              </files>
+            </bnd4>
+            EOF
+
+      - name: Create _yabber-bnd4.xml file for Menu
+        run: |
+              cat << EOF > menu-msgbnd/_yabber-bnd4.xml
+              <?xml version="1.0" encoding="utf-8"?>
+              <bnd4>
+                <filename>menu.msgbnd</filename>
+                <compression>None</compression>
+                <timestamp>07D7R6</timestamp>
+                <format>0x74</format>
+                <bigendian>False</bigendian>
+                <flag1>False</flag1>
+                <flag2>False</flag2>
+                <unicode>True</unicode>
+                <extended>0x00</extended>
+                <files>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>1</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\会話.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>2</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\血文字.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>3</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\ムービー字幕.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>4</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\死因.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>30</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\イベントテキスト.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>31</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\魔石名.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>32</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\魔石説明.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>33</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\魔石うんちく.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>34</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\魔石接頭語.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>35</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\魔石効果.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>70</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\インゲームメニュー.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>76</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\メニュー共通テキスト.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>77</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\メニューその他.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>78</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\ダイアログ.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>79</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\キーガイド.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>80</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\一行ヘルプ.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>90</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\テキスト表示用タグ一覧.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>91</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\機種別タグ_win64.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>92</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\システムメッセージ_win64.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>200</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\SP_メニューテキスト.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>201</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\SP_一行ヘルプ.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>202</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\SP_キーガイド.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>203</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\SP_システムメッセージ_win64.fmg</path>
+                  </file>
+                  <file>
+                    <flags>0x40</flags>
+                    <id>204</id>
+                    <root>N:\SPRJ\data\INTERROOT_ps4\</root>
+                    <path>msg\rusRU\64bit\SP_ダイアログ.fmg</path>
+                  </file>
+                </files>
+              </bnd4>
+              EOF
+
+      - name: Generate rename-mapping-item.txt
+        run: |
+          cat << EOF > rename-mapping-item.txt
+          Accessory_Description.xml|アクセサリ説明.fmg.xml
+          Accessory_Name.xml|アクセサリ名.fmg.xml
+          Accessory_Stock.xml|アクセサリうんちく.fmg.xml
+          Armor_Description.xml|防具説明.fmg.xml
+          Armor_Name.xml|防具名.fmg.xml
+          Item_Description.xml|アイテム説明.fmg.xml
+          Item_Name.xml|アイテム名.fmg.xml
+          Item_Necessities.xml|アイテムうんちく.fmg.xml
+          Magic_Explanation.xml|魔法説明.fmg.xml
+          Magic_Name.xml|魔法名.fmg.xml
+          NPC_Name.xml|NPC名.fmg.xml
+          One's_Vast_Knowledge_of_Magic.xml|魔法うんちく.fmg.xml
+          One's_Vast_Stock_of_Knowledge_About_Armor.xml|防具うんちく.fmg.xml
+          One's_Vast_Stock_of_Knowledge_About_Weapons.xml|武器うんちく.fmg.xml
+          Place_Name.xml|地名.fmg.xml
+          Weapon_Name.xml|武器名.fmg.xml
+          Weapons_Description.xml|武器説明.fmg.xml
+          EOF
+
+      - name: Generate rename-mapping-menu.txt
+        run: |
+          cat << EOF > rename-mapping-menu.txt
+          Bloodstained_Lettering.xml|血文字.fmg.xml
+          Cause_of_Death.xml|死因.fmg.xml
+          Conversation.xml|会話.fmg.xml
+          Dialog.xml|ダイアログ.fmg.xml
+          Event_Text.xml|イベントテキスト.fmg.xml
+          Ingame_Menu.xml|インゲームメニュー.fmg.xml
+          Key_Guide.xml|キーガイド.fmg.xml
+          List_of_Tags_for_Text_Display.xml|テキスト表示用タグ一覧.fmg.xml
+          Magic_Stone_Explanation.xml|魔石説明.fmg.xml
+          Magic_Stone_Prefix.xml|魔石接頭語.fmg.xml
+          Magical_Stone_Effect.xml|魔石効果.fmg.xml
+          Menu_and_Others.xml|メニューその他.fmg.xml
+          Menu_Common_Text.xml|メニュー共通テキスト.fmg.xml
+          Model_Tag_win64.xml|機種別タグ_win64.fmg.xml
+          Movie_Subtitles.xml|ムービー字幕.fmg.xml
+          Name_of_a_Magical_Being.xml|魔石名.fmg.xml
+          One_Line_Help.xml|一行ヘルプ.fmg.xml
+          One's_Vast_Stock_of_Knowledge_About_Magic_and_Stone.xml|魔石うんちく.fmg.xml
+          SP_Dialog.xml|SP_ダイアログ.fmg.xml
+          SP_Key_Guide.xml|SP_キーガイド.fmg.xml
+          SP_Menu_Text.xml|SP_メニューテキスト.fmg.xml
+          SP_One_Line_Help.xml|SP_一行ヘルプ.fmg.xml
+          SP_System_Message_win64.xml|SP_システムメッセージ_win64.fmg.xml
+          System_Message_win64.xml|システムメッセージ_win64.fmg.xml
+          EOF
+
+      - name: Rename XML files based on item mapping
+        run: |
+          cd item-msgbnd/msg/rusRU/64bit
+          while IFS="|" read -r old_name new_name; do
+            [ -f "$old_name" ] && mv "$old_name" "$new_name"
+          done < ../../../../rename-mapping-item.txt
+          cd -
+
+      - name: Rename XML files based on menu mapping
+        run: |
+          cd menu-msgbnd/msg/rusRU/64bit
+          while IFS="|" read -r old_name new_name; do
+            [ -f "$old_name" ] && mv "$old_name" "$new_name"
+          done < ../../../../rename-mapping-menu.txt
+          cd -
+
+      - name: Remove rename-mappings.txt
+        run: | 
+          rm -f rename-mapping-item.txt
+          rm -f rename-mapping-menu.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: processed-xml-files
+          path: |
+            item-msgbnd/**
+            menu-msgbnd/**
