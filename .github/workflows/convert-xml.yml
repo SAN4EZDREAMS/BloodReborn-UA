@@ -27,44 +27,49 @@ jobs:
 
       - name: Delete artifact after use
         run: |
+          $artifactName = "processed-xml-files"
           $artifacts = gh api repos/${{ github.repository }}/actions/artifacts | ConvertFrom-Json
-          $artifact = $artifacts.artifacts | Where-Object { $_.name -eq "processed-xml-files" }
+          $artifact = $artifacts.artifacts | Where-Object { $_.name -eq $artifactName }
           if ($artifact) {
-            gh api --method DELETE repos/${{ github.repository }}/actions/artifacts/$($artifact.id)
-            Write-Host "Artifact deleted"
+              gh api --method DELETE repos/${{ github.repository }}/actions/artifacts/$($artifact.id)
+              Write-Host "Artifact deleted"
           } else {
-            Write-Host "Artifact not found"
+              Write-Host "Artifact not found"
           }
         shell: pwsh
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download Yabber
+      - name: Download and extract Yabber
         run: |
-          Invoke-WebRequest -Uri "https://github.com/JKAnderson/Yabber/releases/download/1.3.1/Yabber.1.3.1.zip" -OutFile "downloaded_files/Yabber.1.3.1.zip"
-          Expand-Archive -Path "downloaded_files/Yabber.1.3.1.zip" -DestinationPath "downloaded_files/Yabber"
+          $YabberUrl = "https://github.com/JKAnderson/Yabber/releases/download/1.3.1/Yabber.1.3.1.zip"
+          $YabberZipPath = "downloaded_files/Yabber.1.3.1.zip"
+          $YabberDestPath = "downloaded_files/Yabber"
+          
+          Invoke-WebRequest -Uri $YabberUrl -OutFile $YabberZipPath
+          Expand-Archive -Path $YabberZipPath -DestinationPath $YabberDestPath -Force
 
       - name: Convert XML to FMG
         run: |
           $folders = @(
-          "${{ github.workspace }}\downloaded_files\item-msgbnd\msg\rusRU\64bit",
-          "${{ github.workspace }}\downloaded_files\menu-msgbnd\msg\rusRU\64bit"
+            "${{ github.workspace }}\downloaded_files\item-msgbnd\msg\rusRU\64bit",
+            "${{ github.workspace }}\downloaded_files\menu-msgbnd\msg\rusRU\64bit"
           )
 
-          foreach ($workDir in $folders) {
-            if (-Not (Test-Path $workDir)) {
-              Write-Host "Skipping: $workDir (Directory does not exist!)"
-              continue
-            }
-             
-            Set-Location -Path $workDir
-            $xmlFiles = Get-ChildItem -Filter "*.xml"
-
-            foreach ($file in $xmlFiles) {
-              Write-Host "Converting: $($file.FullName)"
-              Start-Process -FilePath "${{ github.workspace }}\downloaded_files\Yabber\Yabber 1.3.1\Yabber.exe" -ArgumentList "`"$($file.FullName)`"" -NoNewWindow -Wait
-            }
-          }
+          $folders | ForEach-Object -Parallel {
+              $workDir = $_
+              if (-Not (Test-Path $workDir)) {
+                  Write-Host "Skipping: $workDir (Directory does not exist!)"
+                  return
+              }
+              
+              Set-Location -Path $workDir
+              $xmlFiles = Get-ChildItem -Filter "*.xml"
+              foreach ($file in $xmlFiles) {
+                  Write-Host "Converting: $($file.FullName)"
+                  Start-Process -FilePath "${{ github.workspace }}\downloaded_files\Yabber\Yabber 1.3.1\Yabber.exe" -ArgumentList "`"$($file.FullName)`"" -NoNewWindow -Wait
+              }
+          } -ThrottleLimit 4
 
       - name: Remove XML files after conversion
         run: |
