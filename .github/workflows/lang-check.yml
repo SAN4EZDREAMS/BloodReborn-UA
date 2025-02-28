@@ -1,0 +1,33 @@
+name: Text Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Клонування репозиторію
+        uses: actions/checkout@v3
+
+      - name: Встановлення залежностей
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y hunspell hunspell-uk
+          pip install pandas openpyxl language-tool-python
+
+      - name: Виконання перевірки тексту
+        run: python ./scripts/check_text.py
+
+      - name: Завантаження артефакту (якщо файл існує)
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: spellcheck_report
+          path: text_check_report.xlsx
