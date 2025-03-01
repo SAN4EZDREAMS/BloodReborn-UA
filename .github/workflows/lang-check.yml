@@ -10,15 +10,12 @@ jobs:
       - name: Завантаження репозиторію
         uses: actions/checkout@v3
 
-      - name: Перевірка наявності файлів у Lang_check
+      - name: Встановлення залежностей
         run: |
           if [ -z "$(ls -A Lang_check 2>/dev/null)" ]; then
             echo "Lang_check порожня. Перевірка не потрібна."
             exit 0
           fi
-
-      - name: Встановлення залежностей
-        run: |
           sudo apt-get update
           sudo apt-get install -y aspell aspell-uk
           pip install pandas openpyxl language-tool-python
