@@ -13,7 +13,7 @@ jobs:
       - name: Встановлення залежностей
         run: |
           sudo apt-get update
-          sudo apt-get install -y hunspell hunspell-uk
+          sudo apt-get install -y aspell aspell-uk
           pip install pandas openpyxl language-tool-python
 
       - name: Запуск перевірки тексту

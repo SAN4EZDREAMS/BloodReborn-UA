@@ -1,11 +1,10 @@
 import os
 import re
+import subprocess
 import pandas as pd
-import hunspell
 from language_tool_python import LanguageTool
 
-# Ініціалізація перевірки орфографії та граматики
-spell = hunspell.HunSpell("/usr/share/hunspell/uk_UA.dic", "/usr/share/hunspell/uk_UA.aff")
+# Ініціалізація перевірки граматики
 tool = LanguageTool("uk")
 
 # Папки для перевірки
@@ -30,6 +29,24 @@ def find_xml_files():
                     xml_files.append(os.path.join(root, file))
     return xml_files
 
+# Перевірка орфографії через aspell
+def check_spelling(text):
+    process = subprocess.run(
+        ["aspell", "-a", "--lang=uk"],
+        input=text,
+        text=True,
+        capture_output=True
+    )
+    output = process.stdout.split("\n")
+    
+    errors = []
+    for line in output:
+        if line.startswith("&"):
+            word = line.split()[1]  # Другий елемент — це слово з помилкою
+            errors.append(word)
+    
+    return errors
+
 # Перевірка файлів
 def check_files():
     results = []
@@ -38,9 +55,8 @@ def check_files():
         texts = extract_text_from_xml(file)
         
         for text in texts:
-            # Орфографія (через hunspell)
-            words = re.findall(r'\b\w+\b', text)
-            spelling_errors = [word for word in words if not spell.spell(word)]
+            # Орфографія (через aspell)
+            spelling_errors = check_spelling(text)
 
             # Граматика (LanguageTool)
             grammar_matches = [
