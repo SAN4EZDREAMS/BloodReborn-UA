@@ -1,12 +1,12 @@
 import os
 import re
 import pandas as pd
-from spellchecker import SpellChecker
+import hunspell
 from language_tool_python import LanguageTool
 
-# Ініціалізація перевірки орфографії (SpellChecker) та граматики (LanguageTool)
-spell = SpellChecker(language='uk')
-tool = LanguageTool('uk')
+# Ініціалізація перевірки орфографії та граматики
+spell = hunspell.HunSpell("/usr/share/hunspell/uk_UA.dic", "/usr/share/hunspell/uk_UA.aff")
+tool = LanguageTool("uk")
 
 # Папки для перевірки
 TARGET_DIRS = ["Lang_check"]
@@ -38,11 +38,11 @@ def check_files():
         texts = extract_text_from_xml(file)
         
         for text in texts:
-            # Орфографія (тільки SpellChecker)
+            # Орфографія (через hunspell)
             words = re.findall(r'\b\w+\b', text)
-            spelling_errors = [word for word in words if word not in spell]
-            
-            # Граматика (LanguageTool, без орфографії)
+            spelling_errors = [word for word in words if not spell.spell(word)]
+
+            # Граматика (LanguageTool)
             grammar_matches = [
                 match for match in tool.check(text)
                 if match.ruleId not in ["MORFOLOGIK_RULE_UK_UA"]
