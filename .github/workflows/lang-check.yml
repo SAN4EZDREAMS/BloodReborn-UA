@@ -11,9 +11,11 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Встановлення залежностей
+        id: install_dependencies
         run: |
           if [ -z "$(ls -A Lang_check 2>/dev/null)" ]; then
             echo "Lang_check порожня. Перевірка не потрібна."
+            echo "empty_folder=true" >> $GITHUB_ENV
             exit 0
           fi
           sudo apt-get update
@@ -23,7 +25,7 @@ jobs:
 
       - name: Завантаження звіту як артефакт
         uses: actions/upload-artifact@v4
-        if: success() || failure()
+        if: success() && env.empty_folder != 'true'
         with:
           name: spellcheck-report
           path: scripts/spellcheck_report.xlsx
