@@ -13,8 +13,8 @@ jobs:
       - name: Встановлення залежностей
         run: |
           sudo apt-get update
-          sudo apt-get install -y hunspell hunspell-uk libhunspell-dev
-          pip install pandas openpyxl language-tool-python pyhunspell
+          sudo apt-get install -y hunspell hunspell-uk
+          pip install pandas openpyxl language-tool-python pyspellchecker
 
       - name: Запуск перевірки тексту
         run: python scripts/check_text.py

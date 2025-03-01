@@ -1,27 +1,11 @@
 import os
 import re
 import pandas as pd
-
-try:
-    import hunspell
-except ImportError:
-    import hunspellpy as hunspell  # Альтернативний імпорт
-
+from spellchecker import SpellChecker
 from language_tool_python import LanguageTool
 
-# Ініціалізація перевірки орфографії (Hunspell) та граматики (LanguageTool)
-try:
-    hspell = hunspell.HunSpell('/usr/share/hunspell/uk_UA.dic', '/usr/share/hunspell/uk_UA.aff')
-except Exception:
-    from spellchecker import SpellChecker
-    spell = SpellChecker(language='uk')
-
-    def check_spelling(word):
-        return word in spell
-else:
-    def check_spelling(word):
-        return hspell.spell(word)
-
+# Ініціалізація перевірки орфографії (SpellChecker) та граматики (LanguageTool)
+spell = SpellChecker(language='uk')
 tool = LanguageTool('uk')
 
 # Папки для перевірки
@@ -54,9 +38,9 @@ def check_files():
         texts = extract_text_from_xml(file)
         
         for text in texts:
-            # Орфографія (тільки Hunspell)
+            # Орфографія (тільки SpellChecker)
             words = re.findall(r'\b\w+\b', text)
-            spelling_errors = [word for word in words if not check_spelling(word)]
+            spelling_errors = [word for word in words if word not in spell]
             
             # Граматика (LanguageTool, без орфографії)
             grammar_matches = [
