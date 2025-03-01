@@ -22,7 +22,7 @@ jobs:
 
       - name: Завантаження артефакту (якщо файл існує)
         if: success()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: spellcheck_report
           path: text_check_report.xlsx

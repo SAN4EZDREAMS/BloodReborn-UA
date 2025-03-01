@@ -17,7 +17,7 @@ def check_grammar(text):
     return lt.check(text)
 
 # 🔹 Список папок для перевірки
-target_dirs = ["Item", "Menu"]
+target_dirs = ["Lang_check"]
 
 # 🔹 Список для збереження помилок
 errors = []
