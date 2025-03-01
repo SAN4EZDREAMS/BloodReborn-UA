@@ -1,58 +1,88 @@
 import os
-import xml.etree.ElementTree as ET
-import hunspell
+import re
 import pandas as pd
+
+try:
+    import hunspell
+except ImportError:
+    import hunspellpy as hunspell  # Альтернативний імпорт
+
 from language_tool_python import LanguageTool
 
-# 🔹 Ініціалізація мовних інструментів
-hspell = hunspell.HunSpell('/usr/share/hunspell/uk_UA.dic', '/usr/share/hunspell/uk_UA.aff')
-lt = LanguageTool('uk-UA')
+# Ініціалізація перевірки орфографії (Hunspell) та граматики (LanguageTool)
+try:
+    hspell = hunspell.HunSpell('/usr/share/hunspell/uk_UA.dic', '/usr/share/hunspell/uk_UA.aff')
+except Exception:
+    from spellchecker import SpellChecker
+    spell = SpellChecker(language='uk')
 
-# 🔹 Функція перевірки орфографії
-def check_spelling(word):
-    return hspell.spell(word)
+    def check_spelling(word):
+        return word in spell
+else:
+    def check_spelling(word):
+        return hspell.spell(word)
 
-# 🔹 Функція перевірки граматики
-def check_grammar(text):
-    return lt.check(text)
+tool = LanguageTool('uk')
 
-# 🔹 Список папок для перевірки
-target_dirs = ["Lang_check"]
+# Папки для перевірки
+TARGET_DIRS = ["Lang_check"]
+REPORT_FILE = "scripts/spellcheck_report.xlsx"
 
-# 🔹 Список для збереження помилок
-errors = []
+# Фільтрація тексту в XML
+def extract_text_from_xml(file_path):
+    with open(file_path, "r", encoding="utf-8") as f:
+        content = f.read()
 
-# 🔹 Обхід тільки папок `Item` та `Menu`
-for target_dir in target_dirs:
-    for root, _, files in os.walk(target_dir):
-        for file in files:
-            if file.endswith('.xml'):
-                file_path = os.path.join(root, file)
+    matches = re.findall(r'<text id="\d+">([^<]*)</text>', content)
+    return [text.strip() for text in matches if text.strip() and not re.match(r"^[\*\%]+$", text.strip())]
 
-                # 🔹 Парсимо XML
-                tree = ET.parse(file_path)
-                root_elem = tree.getroot()
+# Пошук усіх XML-файлів у папках
+def find_xml_files():
+    xml_files = []
+    for target_dir in TARGET_DIRS:
+        for root, _, files in os.walk(target_dir):
+            for file in files:
+                if file.endswith(".xml"):
+                    xml_files.append(os.path.join(root, file))
+    return xml_files
 
-                for text_elem in root_elem.findall(".//text"):
-                    text_id = text_elem.get("id", "Unknown")
-                    text_content = text_elem.text.strip() if text_elem.text else ""
+# Перевірка файлів
+def check_files():
+    results = []
+    
+    for file in find_xml_files():
+        texts = extract_text_from_xml(file)
+        
+        for text in texts:
+            # Орфографія (тільки Hunspell)
+            words = re.findall(r'\b\w+\b', text)
+            spelling_errors = [word for word in words if not check_spelling(word)]
+            
+            # Граматика (LanguageTool, без орфографії)
+            grammar_matches = [
+                match for match in tool.check(text)
+                if match.ruleId not in ["MORFOLOGIK_RULE_UK_UA"]
+            ]
 
-                    # 🔹 Ігноруємо пусті рядки, `%null%` або лише `*`
-                    if text_content in ("%null%", "*") or text_content.strip() == "":
-                        continue
+            # Додавання в звіт
+            for word in spelling_errors:
+                results.append([file, text, "Орфографічна помилка", word, "—"])
 
-                    # 🔹 Орфографічна перевірка
-                    words = text_content.split()
-                    for word in words:
-                        if not check_spelling(word):
-                            errors.append(["SPELLING", file_path, text_id, text_content, word, "Невірне написання"])
+            for match in grammar_matches:
+                results.append([file, text, "Граматична помилка", match.ruleId, match.replacements])
 
-                    # 🔹 Граматична перевірка
-                    matches = check_grammar(text_content)
-                    for match in matches:
-                        errors.append(["GRAMMAR", file_path, text_id, text_content, match.ruleId, match.message])
+    return results
 
-# 🔹 Якщо є помилки – зберігаємо в Excel
-if errors:
-    df = pd.DataFrame(errors, columns=["Тип помилки", "Файл", "ID", "Оригінальний текст", "Помилкове слово/Правило", "Опис"])
-    df.to_excel("text_check_report.xlsx", index=False)
+# Створення звіту
+def create_report():
+    errors = check_files()
+    if not errors:
+        print("✅ Помилок не знайдено!")
+        return
+
+    df = pd.DataFrame(errors, columns=["Файл", "Текст", "Тип помилки", "Помилка", "Пропоноване виправлення"])
+    df.to_excel(REPORT_FILE, index=False)
+    print(f"📄 Звіт збережено: {REPORT_FILE}")
+
+if __name__ == "__main__":
+    create_report()

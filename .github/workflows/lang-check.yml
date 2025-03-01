@@ -6,23 +6,22 @@ on:
 jobs:
   spellcheck:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Клонування репозиторію
+      - name: Завантаження репозиторію
         uses: actions/checkout@v3
 
       - name: Встановлення залежностей
         run: |
           sudo apt-get update
-          sudo apt-get install -y hunspell hunspell-uk
-          pip install pandas openpyxl language-tool-python
+          sudo apt-get install -y hunspell hunspell-uk libhunspell-dev
+          pip install pandas openpyxl language-tool-python pyhunspell
 
-      - name: Виконання перевірки тексту
+      - name: Запуск перевірки тексту
         run: python scripts/check_text.py
 
-      - name: Завантаження артефакту (якщо файл існує)
-        if: success()
-        uses: actions/upload-artifact@v4
+      - name: Завантаження звіту як артефакт
+        uses: actions/upload-artifact@v3
+        if: success() || failure()
         with:
-          name: spellcheck_report
-          path: text_check_report.xlsx
+          name: spellcheck-report
+          path: scripts/spellcheck_report.xlsx
