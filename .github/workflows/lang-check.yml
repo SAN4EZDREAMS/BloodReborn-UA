@@ -10,6 +10,14 @@ jobs:
       - name: Завантаження репозиторію
         uses: actions/checkout@v3
 
+      - name: Перевірка наявності файлів у Lang_check
+        id: check_lang_files
+        run: |
+          if [ -z "$(ls -A Lang_check 2>/dev/null)" ]; then
+            echo "Lang_check порожня. Перевірка не потрібна."
+            exit 0
+          fi
+
       - name: Встановлення залежностей
         run: |
           sudo apt-get update
