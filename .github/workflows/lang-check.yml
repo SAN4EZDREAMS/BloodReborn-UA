@@ -18,7 +18,7 @@ jobs:
           pip install pandas openpyxl language-tool-python
 
       - name: Виконання перевірки тексту
-        run: python ./scripts/check_text.py
+        run: python scripts/check_text.py
 
       - name: Завантаження артефакту (якщо файл існує)
         if: success()
