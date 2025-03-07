@@ -1,0 +1,5 @@
+files:
+  - source: Reference/ENG
+    translation: Translated/UA/
+    translatable_elements:
+      - /Item/Accessory_Description_ENG.xml
