@@ -10,6 +10,9 @@ on:
     types: [closed]
 
 jobs:
+  lang-check:
+    uses: ./.github/workflows/lang-check.yml
+
   clang-format:
     uses: ./.github/workflows/clang-format.yml
 
