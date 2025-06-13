@@ -11,16 +11,16 @@
 <text id="10002">&lt;?selectLR?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити</text>
 <text id="10003">&lt;?selectLR?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити</text>
 <text id="10004">&lt;?selectLR?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити</text>
-<text id="11000">&lt;?selectAll?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Перемкнути вигляд &lt;?viewChange?&gt;:Перемкнути статус &lt;?HelpMenu?&gt;</text>
-<text id="11001">&lt;?selectAll?&gt;:Обрати &lt;?conclusion?&gt;:Меню предметів &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Перемкнути вигляд &lt;?viewChange?&gt;:Перемкнути статус &lt;?HelpMenu?&gt;</text>
-<text id="11002">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Скасувати &lt;?viewChange?&gt;:Перемкнути статус</text>
-<text id="11003">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Скасувати &lt;?viewChange?&gt;:Перемкнути статус</text>
+<text id="11000">&lt;?selectAll?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Перемкнути вигляд &lt;?viewChange?&gt;:Змінити статус &lt;?HelpMenu?&gt;</text>
+<text id="11001">&lt;?selectAll?&gt;:Обрати &lt;?conclusion?&gt;:Меню предметів &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Перемкнути вигляд &lt;?viewChange?&gt;:Змінити статус &lt;?HelpMenu?&gt;</text>
+<text id="11002">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Скасувати &lt;?viewChange?&gt;:Змінити статус</text>
+<text id="11003">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Скасувати &lt;?viewChange?&gt;:Змінити статус</text>
 <text id="11004">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити</text>
 <text id="11005">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити</text>
 <text id="11006">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити</text>
 <text id="11007">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити</text>
-<text id="12000">&lt;?selectAll?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Зняти предмет &lt;?viewChange?&gt;:Перемкнути статус</text>
-<text id="12001">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Одягти &lt;?cancel?&gt;:Назад &lt;?commando?&gt;:Перемкнути вигляд &lt;?viewChange?&gt;:Перемкнути статус</text>
+<text id="12000">&lt;?selectAll?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Зняти предмет &lt;?viewChange?&gt;:Змінити статус</text>
+<text id="12001">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Одягти &lt;?cancel?&gt;:Назад &lt;?commando?&gt;:Перемкнути вигляд &lt;?viewChange?&gt;:Змінити статус</text>
 <text id="14000">&lt;?viewChange?&gt;:Перемкнути вигляд &lt;?cancel?&gt;:Закрити &lt;?slectMenuSwitch?&gt;:Пояснення</text>
 <text id="16000">&lt;?selectUD?&gt;:Обрати &lt;?selectLR?&gt;:Змінити &lt;?cancel?&gt;:Назад</text>
 <text id="16001">&lt;?selectUD?&gt;:Обрати &lt;?selectLR?&gt;:Змінити &lt;?cancel?&gt;:Назад</text>
@@ -73,8 +73,8 @@
 <text id="19900">&lt;?slectMenuSwitch?&gt;:Пояснення</text>
 <text id="20000">&lt;?selectUD?&gt;:Обрати &lt;?selectLR?&gt;:Змінити &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Вийти &lt;?viewChange?&gt;:Відновити &lt;?slectMenuSwitch?&gt;:Пояснення</text>
 <text id="20001">&lt;?selectLR?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Скасувати</text>
-<text id="22010">&lt;?selectLR?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Прибрати &lt;?viewChange?&gt;:Перемкнути статус</text>
-<text id="22011">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Змінити відображення &lt;?viewChange?&gt;:Перемкнути статус
+<text id="22010">&lt;?selectLR?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Прибрати &lt;?viewChange?&gt;:Змінити статус</text>
+<text id="22011">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Ввід &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Змінити відображення &lt;?viewChange?&gt;:Змінити статус
 </text>
 <text id="30000">&lt;?selectAll?&gt;:Обрати &lt;?conclusion?&gt;:Купити &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Змінити відображення</text>
 <text id="30100">&lt;?selectAll?&gt;:Обрати &lt;?conclusion?&gt;:З'їсти &lt;?cancel?&gt;:Закрити &lt;?commando?&gt;:Змінити відображення</text>
