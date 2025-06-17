@@ -26,7 +26,7 @@
 <text id="110000">Назад</text>
 <text id="110001">Закрити</text>
 <text id="110002">Скасувати</text>
-<text id="120000">Показати</text>
+<text id="120000">Інше</text>
 <text id="120001">Спробувати</text>
 <text id="120002">Завершити</text>
 <text id="120003">Захист УВІМК./ВИМК.</text>
@@ -69,14 +69,14 @@
 <text id="150016">Масштаб</text>
 <text id="160000">*</text>
 <text id="160001">Вийти</text>
-<text id="200000">Обрати</text>
+<text id="200000">Вибрати</text>
 <text id="200001">Змінити</text>
 <text id="200002">*</text>
 <text id="200003">Кількість</text>
 <text id="200004">%null%</text>
 <text id="200005">Налаштувати</text>
 <text id="200006">Прогорнути</text>
-<text id="310000">Обернути</text>
+<text id="310000">Обертати</text>
 <text id="320000">Допомога</text>
 <text id="320001">Скинути камеру</text>
 <text id="400000">*</text>

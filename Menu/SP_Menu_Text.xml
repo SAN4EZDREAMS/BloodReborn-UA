@@ -940,7 +940,7 @@
 <text id="111007">%null%</text>
 <text id="111008">%null%</text>
 <text id="111009">%null%</text>
-<text id="111010">Відображення</text>
+<text id="111010">Екран</text>
 <text id="111011">Звук</text>
 <text id="111012">%null%</text>
 <text id="111013">%null%</text>
@@ -982,7 +982,7 @@
 <text id="113007">Вібрація контролера</text>
 <text id="113020">Управление</text>
 <text id="114000">Регіони підбору</text>
-<text id="114001">Відобр. імені гравця</text>
+<text id="114001">Відобр. імен гравців</text>
 <text id="114002">Підбір за паролем</text>
 <text id="114003">%null%</text>
 <text id="114004">%null%</text>
@@ -1002,7 +1002,7 @@
 <text id="114018">%null%</text>
 <text id="114019">%null%</text>
 <text id="114020">Заблоковано батьківським контролем.</text>
-<text id="114100">Введіть пароль</text>
+<text id="114100">Введiть пароль</text>
 <text id="115000">Текст</text>
 <text id="115001">Голос</text>
 <text id="115002">%null%</text>
@@ -1502,7 +1502,7 @@
 <text id="401317">%null%</text>
 <text id="401318">%null%</text>
 <text id="401319">%null%</text>
-<text id="401320">Версія застосунку</text>
+<text id="401320">Версія гри</text>
 <text id="401321">Версія сервера</text>
 <text id="401400">Інформація</text>
 <text id="401401">Нової інформації немає.</text>
@@ -1537,7 +1537,7 @@
 <text id="402108">%null%</text>
 <text id="402109">%null%</text>
 <text id="402110">%null%</text>
-<text id="402111">Введення не завершено</text>
+<text id="402111">Потрібне iмʼя</text>
 <text id="402201">Чоловік</text>
 <text id="402202">Жінка</text>
 <text id="402203">%null%</text>
@@ -1614,7 +1614,7 @@
 <text id="402529">*</text>
 <text id="402530">*</text>
 <text id="402531">*</text>
-<text id="402600">Будь ласка, введіть імʼя</text>
+<text id="402600">Будь ласка, введiть iм'я</text>
 <text id="407000">Пила-бердиш/Мушкетон
 (Стандартний)</text>
 <text id="407001">Сокира/Пістоль Мисливця
@@ -1660,10 +1660,10 @@
 <text id="421110">Звичайна</text>
 <text id="421111">Худа</text>
 <text id="421112">Дуже худа</text>
-<text id="421113">Міцна</text>
-<text id="421114">Дуже міцна</text>
-<text id="421115">Міцний верх</text>
-<text id="421116">Міцний низ</text>
+<text id="421113">Сильна</text>
+<text id="421114">Дуже сильна</text>
+<text id="421115">Сильний верх</text>
+<text id="421116">Сильний низ</text>
 <text id="421117">Велика голова</text>
 <text id="421118">Маленька голова</text>
 <text id="421200">*</text>
@@ -2595,7 +2595,7 @@
 <text id="429200">Окуляри</text>
 <text id="430000">Тату/родимка/окуляри</text>
 <text id="430100">Колір тату/родимки</text>
-<text id="430200">Коригувати тату/родимки</text>
+<text id="430200">Змінити тату/родимки</text>
 <text id="430201">%null%</text>
 <text id="430202">%null%</text>
 <text id="430203">%null%</text>
