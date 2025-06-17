@@ -7,48 +7,48 @@
 <bigendian>False</bigendian>
 <entries>
 <text id="1">OK</text>
-<text id="2">CANCEL</text>
-<text id="3">YES</text>
-<text id="4">NO</text>
-<text id="5">Accept</text>
-<text id="6">Do Not Accept</text>
+<text id="2">СКАСУВАТИ</text>
+<text id="3">ТАК</text>
+<text id="4">НІ</text>
+<text id="5">Прийняти</text>
+<text id="6">Не приймати</text>
 <text id="7">%null%</text>
 <text id="8">%null%</text>
-<text id="18300">&lt;?selectUD?&gt;:Select &lt;?conclusion?&gt;:Details &lt;?categoryChangeL?&gt;:Previous 100 &lt;?categoryChangeR?&gt;:Next 100 &lt;?shortCutL?&gt;:Show top &lt;?shortCutR?&gt;:Your Grades</text>
-<text id="41000">This will delete selected profile.
-Is this OK?</text>
-<text id="45000">This game uses an auto-save feature. Do not 
-power off the PlayStation®3 system when the 
-HDD access indicator is flashing.</text>
-<text id="45001">Save file version differs from game version.
-Quit game and sign in to PlayStation®Network
-to download update.</text>
-<text id="45100">There is not enough available space on the hard disk drive. 
-To play Dark Souls, at least &lt;?dataSize?&gt; MB is required. 
+<text id="18300">&lt;?selectUD?&gt;:Обрати &lt;?conclusion?&gt;:Детальніше &lt;?categoryChangeL?&gt;:Попередні 100 &lt;?categoryChangeR?&gt;:Наступні 100 &lt;?shortCutL?&gt;:Початок списку &lt;?shortCutR?&gt;:Ваші оцінки</text>
+<text id="41000">Це видалить обраний профіль.
+Продовжити?</text>
+<text id="45000">У цій грі використовується функція автозбереження.
+Не вимикайте PlayStation®3,
+коли блимає індикатор доступу до жорсткого диска.</text>
+<text id="45001">Версія файлу збереження відрізняється від версії гри.
+Вийдіть з гри та увійдіть у PlayStation®Network,
+щоб завантажити оновлення.</text>
+<text id="45100">На жорсткому диску недостатньо вільного місця.
+Щоб грати в Dark Souls, потрібно щонайменше &lt;?dataSize?&gt; МБ.
 
-Please quit the game and make space on the HDD.</text>
+Будь ласка, вийдіть з гри та звільніть місце на жорсткому диску.</text>
 <text id="45101">%null%</text>
 <text id="45102">%null%</text>
-<text id="45103">There is not enough available space on the HDD. 
-To install the Trophy Set, 
-at least &lt;?dataSize?&gt;d KB of space is required.  
+<text id="45103">На жорсткому диску недостатньо вільного місця.
+Щоб встановити набір трофеїв,
+потрібно щонайменше &lt;?dataSize?&gt; КБ.
 
 
-Select [OK] to start the Delete Utility.
-Select [CANCEL] to cancel installation.</text>
+Оберіть [OK] щоб запустити утиліту видалення.
+Оберіть [СКАСУВАТИ] щоб скасувати встановлення.</text>
 <text id="45104">%null%</text>
 <text id="45105">%null%</text>
 <text id="45106">%null%</text>
 <text id="45107">%null%</text>
 <text id="45108">%null%</text>
 <text id="45109">%null%</text>
-<text id="45110">SAVE DATA was corrupted.</text>
-<text id="45111">SAVE DATA was corrupted.
-Would you like to create new SAVE DATA?
-The current SAVE DATA will be overwritten.
+<text id="45110">Файл збереження пошкоджено.</text>
+<text id="45111">Файл збереження пошкоджено.
+Бажаєте створити новий файл збереження? 
+Поточний файл буде перезаписано. 
 
-Select OK to overwrite SAVE DATA.
-Select CANCEL to reload current SAVE DATA.</text>
+Оберіть [OK] щоб перезаписати файл.
+Оберіть [СКАСУВАТИ] щоб спробувати завантажити наявний файл.</text>
 <text id="45112">%null%</text>
 <text id="45113">%null%</text>
 <text id="45114">%null%</text>
@@ -57,35 +57,35 @@ Select CANCEL to reload current SAVE DATA.</text>
 <text id="45117">%null%</text>
 <text id="45118">%null%</text>
 <text id="45119">%null%</text>
-<text id="45120">Failed to load SAVE DATA.</text>
-<text id="45121">Failed to load SAVE DATA
-Would you like to create new SAVE DATA?
-The current SAVE DATA will be overwritten.
+<text id="45120">Не вдалося завантажити файл збереження.</text>
+<text id="45121">Не вдалося завантажити файл збереження.
+Бажаєте створити новий файл збереження? 
+Поточний файл буде перезаписано. 
 
-Press the CANCEL button to reload SAVE DATA</text>
-<text id="45122">Last time, the game may have been closed before 
-quitting to the Title Screen first. To quit to the 
-Title Screen, always select the Quit Game option 
-from the System tab in the Start Menu.
+Натисніть [СКАСУВАТИ], щоб спробувати завантажити збереження знову.</text>
+<text id="45122">Ймовірно, гра була закрита до виходу
+в головне меню. Щоб завершити гру,
+завжди обирайте пункт "Вийти з гри"
+у вкладці Система в головному меню.
 
-Failing to quit the game properly can result
-in losing some progress.</text>
-<text id="45200">Failed to save SAVE DATA</text>
-<text id="45201">Failed to save SAVE DATA</text>
-<text id="45250">Failed to install Trophy Set
-Quit the game and reload DARK SOULS
-to reinstall</text>
-<text id="45400">You can't create any more characters.
-Delete an existing character and create a new one?
+Невірний вихід із гри може призвести
+до втрати прогресу.</text>
+<text id="45200">Не вдалося зберегти файл збереження.</text>
+<text id="45201">Не вдалося зберегти файл збереження.</text>
+<text id="45250">Не вдалося встановити набір трофеїв.
+Вийдіть з гри та перезапустіть DARK SOULS,
+щоб повторити встановлення.</text>
+<text id="45400">Неможливо створити нових персонажів.  
+Видалити одного з наявних і створити нового?
 
-*You can create up to 10 characters.</text>
-<text id="47000">Checking number of files</text>
-<text id="47100">Loading SAVE DATA
-Do not turn off the system.</text>
-<text id="47101">Checking SAVE DATA
-Do not turn off the system.</text>
-<text id="47102">Loading...
-Do not turn off the system.</text>
+*Максимальна кількість персонажів — 10.</text>
+<text id="47000">Перевірка кількості файлів</text>
+<text id="47100">Завантаження файлу збереження
+Не вимикайте систему.</text>
+<text id="47101">Перевірка файлу збереження
+Не вимикайте систему.</text>
+<text id="47102">Завантаження...
+Не вимикайте систему.</text>
 <text id="47103">%null%</text>
 <text id="47104">%null%</text>
 <text id="47105">%null%</text>
@@ -93,59 +93,59 @@ Do not turn off the system.</text>
 <text id="47107">%null%</text>
 <text id="47108">%null%</text>
 <text id="47109">%null%</text>
-<text id="47110">Updating SAVE DATA...
-Do not turn off the system.</text>
-<text id="47111">Updating SAVE DATA...
-Do not turn off the system.</text>
-<text id="47112">Making SAVE DATA...
-Do not turn off the system.</text>
-<text id="47113">Deleting Profile...
-Do not turn off the system.</text>
+<text id="47110">Оновлення файлу збереження...
+Не вимикайте систему.</text>
+<text id="47111">Оновлення файлу збереження...
+Не вимикайте систему.</text>
+<text id="47112">Створення файлу збереження...
+Не вимикайте систему.</text>
+<text id="47113">Видалення профілю...
+Не вимикайте систему.</text>
 <text id="47114">%null%</text>
 <text id="47115">%null%</text>
 <text id="47116">%null%</text>
 <text id="47117">%null%</text>
 <text id="47118">%null%</text>
 <text id="47119">%null%</text>
-<text id="47120">Resetting Trophy Set...
-Do not turn off the system.</text>
-<text id="47121">Installing Trophy Set...
-Do not turn off the system.</text>
-<text id="48000">Discard changes and return</text>
-<text id="50001">Acquiring Ranking Data</text>
-<text id="50002">Ranking Data cannot be acquired in Offline Mode</text>
-<text id="50501">Start game in Offline Mode</text>
-<text id="50502">You need to be signed in to PlayStation®Network
-to access Network Play. Please check the
-network connection.</text>
-<text id="50503">Parental lock is set on your
-PlayStation®Network account.
-Online Service cannot be used.</text>
-<text id="50504">You are not signed in to PlayStation®Network.
-You must sign in to access Network Play.
-Would you like to sign in now?</text>
-<text id="50505">A network error has occurred.
-Cannot use Network Play.</text>
-<text id="50506">Network Play cannot be used with this
-version.</text>
-<text id="50507">You are not signed in. Do you still wish
-to start the game? You will only be able
-to play offline.</text>
-<text id="50520">Service not available at this time
-You will only be able to play offline</text>
-<text id="50521">Service not yet available
-You will only be able to play offline</text>
-<text id="50522">Currently undergoing maintenance
-You will only be able to play offline</text>
-<text id="50523">No response from server
-You will only be able to play offline</text>
-<text id="50524">Cannot use server at this time
-You will only be able to play offline</text>
-<text id="50525">Cannot use server at this time
-You will only be able to play offline</text>
-<text id="51100">You have been signed out from
-PlayStation®Network.
-Returning to the Title Screen.</text>
+<text id="47120">Скидання набору трофеїв...
+Не вимикайте систему.</text>
+<text id="47121">Встановлення набору трофеїв...  
+Не вимикайте систему.</text>
+<text id="48000">Відхилити зміни і повернутися</text>
+<text id="50001">Отримання даних рейтингу</text>
+<text id="50002">Дані рейтингу недоступні в режимі без мережі</text>
+<text id="50501">Запуск гри в режимі без мережі</text>
+<text id="50502">Для доступу до мережевої гри потрібно увійти
+до PlayStation®Network.
+Перевірте ваше підключення до мережі.</text>
+<text id="50503">На вашому обліковому записі PlayStation®Network  
+встановлено батьківський контроль.
+Мережева служба недоступна.</text>
+<text id="50504">Ви не увійшли до PlayStation®Network.  
+Щоб грати в мережевому режимі, потрібно увійти.
+Увійти зараз?</text>
+<text id="50505">Сталася помилка мережі.
+Мережева гра недоступна.</text>
+<text id="50506">Ця версія не підтримує
+мережеву гру.</text>
+<text id="50507">Ви не увійшли до облікового запису.
+Все одно запустити гру?
+Доступний лише режимі без мережі.</text>
+<text id="50520">Служба наразі недоступна
+Доступний лише режимі без мережі.</text>
+<text id="50521">Служба ще недоступна
+Доступний лише режимі без мережі.</text>
+<text id="50522">Тривають технічні роботи
+Доступний лише режимі без мережі.</text>
+<text id="50523">Немає відповіді від сервера
+Доступний лише режимі без мережі.</text>
+<text id="50524">Неможливо підключитися до сервера
+Доступний лише режимі без мережі.</text>
+<text id="50525">Неможливо підключитися до сервера
+Доступний лише режимі без мережі.</text>
+<text id="51100">Вас було відключено від
+PlayStation®Network.  
+Повернення до головного меню.</text>
 <text id="65400">%null%</text>
 <text id="65401">%null%</text>
 <text id="65402">%null%</text>
@@ -156,34 +156,34 @@ Returning to the Title Screen.</text>
 <text id="65407">%null%</text>
 <text id="65408">%null%</text>
 <text id="65409">%null%</text>
-<text id="65410">Downloading advanced data</text>
-<text id="65411">Failed to download advanced data
+<text id="65410">Завантаження додаткових даних</text>
+<text id="65411">Не вдалося завантажити додаткові дані
 
-*Advanced data is only tallied for players near top</text>
-<text id="65412">Acquiring your data</text>
-<text id="65413">Your data was not found</text>
+*Додаткові дані враховуються лише для гравців у топі</text>
+<text id="65412">Отримання ваших даних</text>
+<text id="65413">Ваші дані не знайдено</text>
 <text id="70000">%null%</text>
-<text id="20001000">Session lost.</text>
-<text id="20001001">Network connection has become unstable.
-Leaving session.</text>
-<text id="20001002">You have signed out from PlayStation®Network.
-Returning to the Title Screen...</text>
-<text id="20001003">Failed to create session.</text>
-<text id="20001004">Failed to join session.</text>
-<text id="20001005">You have signed out from PlayStation®Network.
-Returning to the Title Screen...</text>
+<text id="20001000">Сесію перервано.</text>
+<text id="20001001">Мережеве з'єднання нестабільне.
+Вихід із сесії.</text>
+<text id="20001002">Ви вийшли з PlayStation®Network.
+Повернення до головного меню...</text>
+<text id="20001003">Не вдалося створити сесію.</text>
+<text id="20001004">Не вдалося приєднатися до сесії.</text>
+<text id="20001005">Ви вийшли з PlayStation®Network.
+Повернення до головного меню...</text>
 <text id="20001006">%null%</text>
 <text id="20001007">%null%</text>
 <text id="20001008">%null%</text>
 <text id="20001009">%null%</text>
-<text id="20001010">You have signed out from PlayStation®Network.
-You must sign in to access Network Play.
-Returning to the Title Screen...</text>
+<text id="20001010">Ви вийшли з PlayStation®Network.
+Щоб грати в мережевому режимі, потрібно увійти.
+Повернення до головного меню...</text>
 <text id="20001011">%null%</text>
 <text id="20001012">%null%</text>
 <text id="20001013">%null%</text>
 <text id="20001014">%null%</text>
-<text id="20001015">P2P connection has been lost
-Returning to Main Menu</text>
+<text id="20001015">З'єднання P2P перервано
+Повернення до головного меню</text>
 </entries>
 </fmg>
