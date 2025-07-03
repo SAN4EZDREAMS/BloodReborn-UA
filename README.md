@@ -1,6 +1,6 @@
 # BloodReborn-UA
-<img src="https://staticdelivery.nexusmods.com/mods/2708/images/358/358-1750195567-975438375.png">
-This repository contains the **Ukrainian translation** of the game text from **Bloodborne**. The translation was done to provide better access to the game for Ukrainian-speaking players.
+<a href="https://www.nexusmods.com/bloodborne/mods/358"><img src="https://staticdelivery.nexusmods.com/mods/2708/images/358/358-1750195567-975438375.png"></a>
+This repository contains the Ukrainian translation of the game text from Bloodborne. The translation was done to provide better access to the game for Ukrainian-speaking players.
 
 ## Description
 
