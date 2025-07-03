@@ -1,10 +1,10 @@
 # BloodReborn-UA
-
-This repository contains the **Ukrainian translation** of the game text from **[REDACTED]**. The translation was done to provide better access to the game for Ukrainian-speaking players.
+<img src="https://staticdelivery.nexusmods.com/mods/2708/images/358/358-1750195567-975438375.png">
+This repository contains the **Ukrainian translation** of the game text from **Bloodborne**. The translation was done to provide better access to the game for Ukrainian-speaking players.
 
 ## Description
 
-This project contains adapted texts and dialogues from the original game **[REDACTED]**. All translations are done manually, taking into account language and cultural nuances.
+This project contains adapted texts and dialogues from the original game **Bloodborne**. All translations are done manually, taking into account language and cultural nuances.
 
 This repository allows you to use, distribute, and modify the translation according to the licensing terms.
 
